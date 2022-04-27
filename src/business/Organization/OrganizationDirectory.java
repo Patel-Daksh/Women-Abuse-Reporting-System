@@ -12,6 +12,7 @@ import java.util.ArrayList;
  *
  * @author dax98
  */
+//Adding comment
 public class OrganizationDirectory {
       private ArrayList<Organization> organizationList;
 

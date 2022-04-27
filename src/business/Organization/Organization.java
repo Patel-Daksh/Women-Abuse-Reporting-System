@@ -23,7 +23,7 @@ public abstract class Organization {
     private int organizationID;
     private static int counter=0;
     public enum Type{
-        CaseReporter("CaseReporterOrganization"),;
+        CaseReporter("CaseReporterOrganization"), CaseVolunteer("CaseVolunteer");
         private String value;
         private Type(String value) {
             this.value = value;

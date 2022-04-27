@@ -92,11 +92,11 @@ public class SignUpJFrame extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        detailsjPanel.setBackground(new java.awt.Color(255, 255, 255));
+        detailsjPanel.setBackground(new java.awt.Color(242, 204, 143));
         detailsjPanel.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(230, 126, 34));
+        jLabel1.setForeground(new java.awt.Color(224, 122, 95));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Enter your details below ");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -110,6 +110,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
         detailsjPanel.add(jLabel1, gridBagConstraints);
 
         fnamejLabel.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        fnamejLabel.setForeground(new java.awt.Color(61, 64, 91));
         fnamejLabel.setText("Full Name");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -121,6 +122,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
         detailsjPanel.add(fnamejLabel, gridBagConstraints);
 
         contactjLabel.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        contactjLabel.setForeground(new java.awt.Color(61, 64, 91));
         contactjLabel.setText("Contact Number");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -132,6 +134,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
         detailsjPanel.add(contactjLabel, gridBagConstraints);
 
         usernamejLabel.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        usernamejLabel.setForeground(new java.awt.Color(61, 64, 91));
         usernamejLabel.setText("Username");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -143,6 +146,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
         detailsjPanel.add(usernamejLabel, gridBagConstraints);
 
         passwordjLabel.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        passwordjLabel.setForeground(new java.awt.Color(61, 64, 91));
         passwordjLabel.setText("Password");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -161,6 +165,12 @@ public class SignUpJFrame extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(11, 27, 0, 0);
         detailsjPanel.add(nameJTextField, gridBagConstraints);
+
+        contactTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contactTextFieldActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -180,9 +190,9 @@ public class SignUpJFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(26, 27, 0, 0);
         detailsjPanel.add(usernameJTextField, gridBagConstraints);
 
-        signupjButton.setBackground(new java.awt.Color(51, 102, 255));
+        signupjButton.setBackground(new java.awt.Color(129, 178, 154));
         signupjButton.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
-        signupjButton.setForeground(new java.awt.Color(255, 255, 255));
+        signupjButton.setForeground(new java.awt.Color(61, 64, 91));
         signupjButton.setText("Sign Up");
         signupjButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
@@ -238,6 +248,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
         detailsjPanel.add(networkJComboBox, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(61, 64, 91));
         jLabel2.setText("City");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -261,24 +272,16 @@ public class SignUpJFrame extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridBagLayout());
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 826, -1));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(244, 241, 222));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Monaco", 1, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 102, 255));
+        jButton1.setForeground(new java.awt.Color(61, 64, 91));
         jButton1.setText("Women Rescue Volunteer");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
-            }
-        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -435,13 +438,9 @@ public class SignUpJFrame extends javax.swing.JFrame {
         eng.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        jButton1.setForeground(Color.black);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseEntered
-
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        jButton1.setForeground(Color.white);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseExited
+    private void contactTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contactTextFieldActionPerformed
 
     /**
      * @param args the command line arguments

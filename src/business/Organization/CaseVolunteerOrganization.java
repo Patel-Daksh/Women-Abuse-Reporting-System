@@ -22,7 +22,7 @@ public class CaseVolunteerOrganization extends Organization{
     
     @Override
     public ArrayList<Role> getSupportedRole() {
-        ArrayList<Role> roles = new ArrayList();
+        ArrayList<Role> roles = new ArrayList<Role>();
         roles.add(new CaseVolunteerRole());
         return roles;
     }

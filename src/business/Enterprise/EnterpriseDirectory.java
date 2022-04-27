@@ -36,11 +36,32 @@ public class EnterpriseDirectory {
         enterpriseList=new ArrayList<Enterprise>();
     }
     
+    //Create enterprise
     public Enterprise createAndAddEnterprise(String name,Enterprise.EnterpriseType type){
         Enterprise enterprise=null;
         
         if(type==Enterprise.EnterpriseType.CaseReporter){
             enterprise=new CaseReporterEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
+        if(type==Enterprise.EnterpriseType.Wellness){
+            enterprise=new WellnessEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
+        if(type==Enterprise.EnterpriseType.Justice){
+            enterprise=new JusticeEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
+        if(type==Enterprise.EnterpriseType.NGO){
+            enterprise=new NGOrgEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
+        if(type==Enterprise.EnterpriseType.Pharmaceutical){
+            enterprise=new PharmaceuticalEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
+        if(type==Enterprise.EnterpriseType.Rehabilitation){
+            enterprise=new RehabilitationEnterprise(name);
             enterpriseList.add(enterprise);
         }  
         return enterprise;

@@ -17,6 +17,10 @@ public class WorkQueue {
     public WorkQueue() {
         caseReporterWorkRequestList = new ArrayList<CaseReporterWorkRequest>();
     }
+    
+    public void setCaseReporterWorkRequestList(ArrayList<CaseReporterWorkRequest> caseReporterWorkRequestList) {
+        this.caseReporterWorkRequestList = caseReporterWorkRequestList;
+    }
 
     public ArrayList<CaseReporterWorkRequest> getCaseReporterWorkRequestList() {
         return caseReporterWorkRequestList;

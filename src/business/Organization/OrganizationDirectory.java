@@ -16,7 +16,7 @@ public class OrganizationDirectory {
       private ArrayList<Organization> organizationList;
 
     public OrganizationDirectory() {
-        organizationList = new ArrayList();
+        organizationList = new ArrayList<Organization>();
     }
 
     public ArrayList<Organization> getOrganizationList() {
@@ -28,6 +28,9 @@ public class OrganizationDirectory {
          if (type.getValue().equals(Type.CaseReporter.getValue())){
             organization = new CaseReporterOrganization();
             organizationList.add(organization);
+        }else if (type.getValue().equals(Type.CaseVolunteer.getValue())){
+            organization = new CaseVolunteerOrganization();
+            organizationList.add(organization);
         }
         return organization;
     }
@@ -37,6 +40,7 @@ public class OrganizationDirectory {
             if(Name.equalsIgnoreCase(org.getName())){
                 return org;
             }
+            
         }
         return null; 
     }

@@ -56,12 +56,12 @@ public class PharmacistJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel3.setBackground(new java.awt.Color(253, 235, 208));
+        jPanel3.setBackground(new java.awt.Color(129, 178, 154));
         jPanel3.setToolTipText("");
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
         jLabel2.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel2.setForeground(new java.awt.Color(61, 64, 91));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Welcome Pharmacist");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

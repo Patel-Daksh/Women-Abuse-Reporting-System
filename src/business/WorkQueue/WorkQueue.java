@@ -14,13 +14,34 @@ public class WorkQueue {
     
     private ArrayList<CaseReporterWorkRequest> caseReporterWorkRequestList;
     private ArrayList<PsychiatristWorkRequest> psychiatristWorkRequestList;
+    private ArrayList<DrWorkRequest> DoctorworkRequestList;
+    private ArrayList<PharmacistWorkRequest> PharmacistWorkRequest;
+    
 
     public WorkQueue() {
         caseReporterWorkRequestList = new ArrayList<CaseReporterWorkRequest>();
         psychiatristWorkRequestList=new ArrayList<PsychiatristWorkRequest>();
-
+        DoctorworkRequestList = new ArrayList<DrWorkRequest>();
+        PharmacistWorkRequest = new ArrayList<PharmacistWorkRequest>();
     }
+
+    public ArrayList<PharmacistWorkRequest> getPharmacistWorkRequest() {
+        return PharmacistWorkRequest;
+    }
+
+    public void setPharmacistWorkRequest(ArrayList<PharmacistWorkRequest> PharmacistWorkRequest) {
+        this.PharmacistWorkRequest = PharmacistWorkRequest;
+    }
+
     
+    public ArrayList<DrWorkRequest> getDoctorworkRequestList() {
+        return DoctorworkRequestList;
+    }
+
+    public void setDoctorworkRequestList(ArrayList<DrWorkRequest> DoctorworkRequestList) {
+        this.DoctorworkRequestList = DoctorworkRequestList;
+    }
+   
     public void setCaseReporterWorkRequestList(ArrayList<CaseReporterWorkRequest> caseReporterWorkRequestList) {
         this.caseReporterWorkRequestList = caseReporterWorkRequestList;
     }

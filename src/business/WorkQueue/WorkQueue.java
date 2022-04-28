@@ -13,9 +13,12 @@ import java.util.ArrayList;
 public class WorkQueue {
     
     private ArrayList<CaseReporterWorkRequest> caseReporterWorkRequestList;
+    private ArrayList<PsychiatristWorkRequest> psychiatristWorkRequestList;
 
     public WorkQueue() {
         caseReporterWorkRequestList = new ArrayList<CaseReporterWorkRequest>();
+        psychiatristWorkRequestList=new ArrayList<PsychiatristWorkRequest>();
+
     }
     
     public void setCaseReporterWorkRequestList(ArrayList<CaseReporterWorkRequest> caseReporterWorkRequestList) {
@@ -25,7 +28,12 @@ public class WorkQueue {
     public ArrayList<CaseReporterWorkRequest> getCaseReporterWorkRequestList() {
         return caseReporterWorkRequestList;
     }
-    
+    public ArrayList<PsychiatristWorkRequest> getPsychiatristWorkRequestList() {
+        return psychiatristWorkRequestList;
+    }
+     public void setPsychiatristWorkRequestList(ArrayList<PsychiatristWorkRequest> psychiatristWorkRequestList) {
+        this.psychiatristWorkRequestList = psychiatristWorkRequestList;
+    }
     public int getcountbytypesa(String type)
     {
         int count=0;

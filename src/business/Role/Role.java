@@ -18,7 +18,10 @@ import javax.swing.JPanel;
 public abstract class Role {
 
     public enum RoleType {
-        roles("roles");
+        Admin("Admin"),
+        Doctor("Doctor"),
+        LabAssistant("Lab Assistant");
+
         private String value;
 
         private RoleType(String value) {

@@ -28,9 +28,4 @@ public class EncounterCounsellorDir {
     public HashMap<String, ArrayList<EncounterCounsellor>> getEncounterDirectory() {
         return EncounterDirectory;
     }
-    
-    
-    
-    
-    
 }

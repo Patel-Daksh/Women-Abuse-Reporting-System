@@ -42,9 +42,4 @@ public class EncounterPsychiatrist {
     public void setProgress(String progress) {
         this.progress = progress;
     }
-
-    
-    
-    
-    
 }

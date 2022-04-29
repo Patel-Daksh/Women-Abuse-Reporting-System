@@ -12,6 +12,7 @@ import business.Organization.Organization;
 import business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import javax.swing.JPanel;
+import ui.EnterpriseAdmin.EnterpriseAdminJPanel;
 
 /**
  *
@@ -20,7 +21,7 @@ import javax.swing.JPanel;
 public class HealthAdminRole extends Role {
       @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-        return null;
+        return new EnterpriseAdminJPanel(userProcessContainer, enterprise, business);
     }
 
 }

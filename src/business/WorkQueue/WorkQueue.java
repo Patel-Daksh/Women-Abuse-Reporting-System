@@ -17,6 +17,8 @@ public class WorkQueue {
     private ArrayList<DrWorkRequest> DoctorworkRequestList;
     private ArrayList<PharmacistWorkRequest> PharmacistWorkRequest;
     private ArrayList<LabAssistantWorkRequest> LabAssistanceWorkRequest;
+     private ArrayList<LawyerWorkRequest> LawyerworkRequestList;
+     
 
     
 
@@ -26,9 +28,18 @@ public class WorkQueue {
         DoctorworkRequestList = new ArrayList<DrWorkRequest>();
         PharmacistWorkRequest = new ArrayList<PharmacistWorkRequest>();
         LabAssistanceWorkRequest = new ArrayList<LabAssistantWorkRequest>();
-
+        LawyerworkRequestList=new ArrayList<LawyerWorkRequest>();
     }
 
+    public ArrayList<LawyerWorkRequest> getLawyerworkRequestList() {
+        return LawyerworkRequestList;
+    }
+
+    public void setLawyerworkRequestList(ArrayList<LawyerWorkRequest> LawyerworkRequestList) {
+        this.LawyerworkRequestList = LawyerworkRequestList;
+    }
+    
+    
     public ArrayList<PharmacistWorkRequest> getPharmacistWorkRequest() {
         return PharmacistWorkRequest;
     }

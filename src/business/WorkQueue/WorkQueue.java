@@ -36,11 +36,7 @@ public class WorkQueue {
     public void setPharmacistWorkRequest(ArrayList<PharmacistWorkRequest> PharmacistWorkRequest) {
         this.PharmacistWorkRequest = PharmacistWorkRequest;
     }
-
     
-    public ArrayList<DrWorkRequest> getDoctorworkRequestList() {
-        return DoctorworkRequestList;
-    }
     public ArrayList<LabAssistantWorkRequest> getLabAssistanceWorkRequest() {
         return LabAssistanceWorkRequest;
     }
@@ -49,19 +45,23 @@ public class WorkQueue {
         this.DoctorworkRequestList = DoctorworkRequestList;
     }
    
+     public ArrayList<CaseReporterWorkRequest> getCaseReporterWorkRequestList() {
+        return caseReporterWorkRequestList;
+     }
+     
+     public ArrayList<PsychiatristWorkRequest> getPsychiatristWorkRequestList() {
+        return psychiatristWorkRequestList;
+    }
+     
+
     public void setCaseReporterWorkRequestList(ArrayList<CaseReporterWorkRequest> caseReporterWorkRequestList) {
         this.caseReporterWorkRequestList = caseReporterWorkRequestList;
     }
-
-    public ArrayList<CaseReporterWorkRequest> getCaseReporterWorkRequestList() {
-        return caseReporterWorkRequestList;
-    }
-    public ArrayList<PsychiatristWorkRequest> getPsychiatristWorkRequestList() {
-        return psychiatristWorkRequestList;
-    }
-     public void setPsychiatristWorkRequestList(ArrayList<PsychiatristWorkRequest> psychiatristWorkRequestList) {
+    
+    public void setPsychiatristWorkRequestList(ArrayList<PsychiatristWorkRequest> psychiatristWorkRequestList) {
         this.psychiatristWorkRequestList = psychiatristWorkRequestList;
     }
+    
      public void setLabAssistanceWorkRequest(ArrayList<LabAssistantWorkRequest> LabAssistanceWorkRequest) {
         this.LabAssistanceWorkRequest = LabAssistanceWorkRequest;
     }

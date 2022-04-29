@@ -48,7 +48,7 @@
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="d0" green="eb" red="fd" type="rgb"/>
+              <Color blue="9a" green="b2" red="81" type="rgb"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="inheritsPopupMenu" type="boolean" value="true"/>

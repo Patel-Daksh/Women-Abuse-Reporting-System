@@ -8,6 +8,7 @@ package ui.CaseVolunteer;
 import javax.swing.JPanel; 
 import business.EcoSystem;
 import business.Network.Network;
+import business.Organization.CaseVolunteerOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.CaseReporterWorkRequest;
@@ -37,8 +38,7 @@ public class CaseRequestJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-       // this.enterprise=enterprise;
-    //    this.organization=(CaseVolunteerOrganization)organization;
+        this.organization=(CaseVolunteerOrganization)organization;
         this.userAccount=userAccount;
         this.network = network;
         

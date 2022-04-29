@@ -71,7 +71,6 @@ public class CaseReporterViewStatusJPanel extends javax.swing.JPanel {
         lblCaseVolunteer = new javax.swing.JLabel();
         lblDate = new javax.swing.JLabel();
         lblReceiver = new javax.swing.JLabel();
-        lblStatus = new javax.swing.JLabel();
         txtCaseVolunteerDate = new javax.swing.JLabel();
         txtCaseVolunteer = new javax.swing.JLabel();
         txtCaseVolunteerStatus = new javax.swing.JLabel();
@@ -92,14 +91,15 @@ public class CaseReporterViewStatusJPanel extends javax.swing.JPanel {
         txtPsych = new javax.swing.JLabel();
         txtPsychStatus = new javax.swing.JLabel();
         btnCheckStatus = new javax.swing.JButton();
+        lblStatus = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(244, 241, 222));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(244, 241, 222));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tableCases.setModel(new javax.swing.table.DefaultTableModel(
@@ -126,53 +126,48 @@ public class CaseReporterViewStatusJPanel extends javax.swing.JPanel {
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 0, 598, 156));
 
         lblCaseVolunteer.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        lblCaseVolunteer.setForeground(new java.awt.Color(51, 102, 255));
+        lblCaseVolunteer.setForeground(new java.awt.Color(61, 64, 91));
         lblCaseVolunteer.setText("Case Volunteer");
         jPanel2.add(lblCaseVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 189, 125, -1));
 
         lblDate.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        lblDate.setForeground(new java.awt.Color(230, 126, 34));
+        lblDate.setForeground(new java.awt.Color(224, 122, 95));
         lblDate.setText("Date:");
-        jPanel2.add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 217, -1, -1));
+        jPanel2.add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
         lblReceiver.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        lblReceiver.setForeground(new java.awt.Color(230, 126, 34));
+        lblReceiver.setForeground(new java.awt.Color(224, 122, 95));
         lblReceiver.setText("Reciever:");
-        jPanel2.add(lblReceiver, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 270, -1, 32));
-
-        lblStatus.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        lblStatus.setForeground(new java.awt.Color(230, 126, 34));
-        lblStatus.setText("Status:");
-        jPanel2.add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 320, -1, 21));
-        jPanel2.add(txtCaseVolunteerDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 217, 125, 35));
+        jPanel2.add(lblReceiver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, 32));
+        jPanel2.add(txtCaseVolunteerDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 217, 120, 35));
         jPanel2.add(txtCaseVolunteer, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 270, 125, 32));
-        jPanel2.add(txtCaseVolunteerStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 320, 125, 21));
+        jPanel2.add(txtCaseVolunteerStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 320, 125, 30));
 
         lblCounsellor.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        lblCounsellor.setForeground(new java.awt.Color(51, 102, 255));
+        lblCounsellor.setForeground(new java.awt.Color(61, 64, 91));
         lblCounsellor.setText("Counsellor");
-        jPanel2.add(lblCounsellor, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 189, 103, -1));
-        jPanel2.add(txtDoctorDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 217, 34, 35));
-        jPanel2.add(txtDoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 270, 34, 32));
-        jPanel2.add(txtDoctorStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 320, 34, 21));
+        jPanel2.add(lblCounsellor, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 103, -1));
+        jPanel2.add(txtDoctorDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 217, 100, 30));
+        jPanel2.add(txtDoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 90, 32));
+        jPanel2.add(txtDoctorStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 100, 30));
 
         lblLawyer.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        lblLawyer.setForeground(new java.awt.Color(51, 102, 255));
+        lblLawyer.setForeground(new java.awt.Color(61, 64, 91));
         lblLawyer.setText("Lawyer");
-        jPanel2.add(lblLawyer, new org.netbeans.lib.awtextra.AbsoluteConstraints(518, 189, 101, -1));
+        jPanel2.add(lblLawyer, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 101, -1));
 
         lblDoc.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        lblDoc.setForeground(new java.awt.Color(51, 102, 255));
+        lblDoc.setForeground(new java.awt.Color(61, 64, 91));
         lblDoc.setText("Doctor");
-        jPanel2.add(lblDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(246, 189, 74, -1));
+        jPanel2.add(lblDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 74, -1));
 
         lblPsych.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        lblPsych.setForeground(new java.awt.Color(51, 102, 255));
+        lblPsych.setForeground(new java.awt.Color(61, 64, 91));
         lblPsych.setText("Psychiatrist");
-        jPanel2.add(lblPsych, new org.netbeans.lib.awtextra.AbsoluteConstraints(637, 189, 108, -1));
+        jPanel2.add(lblPsych, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 190, 108, -1));
         jPanel2.add(txtCounsellorDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 217, 120, 35));
         jPanel2.add(txtCOunsellor, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 270, 120, 32));
-        jPanel2.add(txtCounsellorStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 320, 120, 21));
+        jPanel2.add(txtCounsellorStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 321, 120, 30));
         jPanel2.add(txtLawyerDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(518, 217, 101, 35));
         jPanel2.add(txtLawyer, new org.netbeans.lib.awtextra.AbsoluteConstraints(516, 270, 103, 36));
         jPanel2.add(txtLawyerStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(516, 320, 103, 21));
@@ -180,17 +175,17 @@ public class CaseReporterViewStatusJPanel extends javax.swing.JPanel {
         jPanel2.add(txtPsych, new org.netbeans.lib.awtextra.AbsoluteConstraints(637, 270, 145, 36));
         jPanel2.add(txtPsychStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(637, 320, 145, 21));
 
-        btnCheckStatus.setBackground(new java.awt.Color(51, 102, 255));
+        btnCheckStatus.setBackground(new java.awt.Color(129, 178, 154));
         btnCheckStatus.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnCheckStatus.setForeground(new java.awt.Color(255, 255, 255));
+        btnCheckStatus.setForeground(new java.awt.Color(61, 64, 91));
         btnCheckStatus.setText("Check Status");
         btnCheckStatus.setBorderPainted(false);
         btnCheckStatus.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnCheckStatusMouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnCheckStatusMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCheckStatusMouseExited(evt);
             }
         });
         btnCheckStatus.addActionListener(new java.awt.event.ActionListener() {
@@ -200,9 +195,14 @@ public class CaseReporterViewStatusJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(btnCheckStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(685, 70, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
+        lblStatus.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblStatus.setForeground(new java.awt.Color(224, 122, 95));
+        lblStatus.setText("Status:");
+        jPanel2.add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, 21));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 574));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, 400));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -16, 940, 590));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCheckStatusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckStatusMouseEntered

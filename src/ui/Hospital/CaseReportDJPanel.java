@@ -93,28 +93,37 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setForeground(new java.awt.Color(61, 64, 91));
 
+        namesurvivorjLabel.setForeground(new java.awt.Color(61, 64, 91));
         namesurvivorjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         namesurvivorjLabel.setText("Name of Survivor : ");
 
+        relationjLabel.setForeground(new java.awt.Color(61, 64, 91));
         relationjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         relationjLabel.setText("Relation with Survivor : ");
 
+        typejLabel.setForeground(new java.awt.Color(61, 64, 91));
         typejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        typejLabel.setText("Type of Sexual Assault : ");
+        typejLabel.setText("Type of  Assault : ");
 
+        locationjLabel.setForeground(new java.awt.Color(61, 64, 91));
         locationjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         locationjLabel.setText("Location of Incident :");
 
+        timejLabel.setForeground(new java.awt.Color(61, 64, 91));
         timejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         timejLabel.setText("Date of Incident :");
 
+        detailsjLabel.setForeground(new java.awt.Color(61, 64, 91));
         detailsjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         detailsjLabel.setText("More Details : ");
 
+        suspecttypejLabel.setForeground(new java.awt.Color(61, 64, 91));
         suspecttypejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         suspecttypejLabel.setText("Suspect :");
 
+        namesuspectjLabel.setForeground(new java.awt.Color(61, 64, 91));
         namesuspectjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         namesuspectjLabel.setText("Name of Suspect : ");
 
@@ -136,7 +145,9 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(129, 178, 154));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(61, 64, 91));
         jButton1.setText("Request Lab Test");
         jButton1.setBorderPainted(false);
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -153,7 +164,9 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(129, 178, 154));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(61, 64, 91));
         jButton3.setText("View Lab Test");
         jButton3.setBorderPainted(false);
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -170,7 +183,9 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(129, 178, 154));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(61, 64, 91));
         jButton2.setText("Prescribe Medicines");
         jButton2.setBorderPainted(false);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -187,7 +202,9 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(129, 178, 154));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(61, 64, 91));
         jButton4.setText("Send Invite");
         jButton4.setBorderPainted(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -270,7 +287,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(namesuspectjLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 86, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 85, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3)
@@ -289,8 +306,11 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(33, 24, 182, 146);
         jPanel1.add(jPanel2, gridBagConstraints);
 
+        jButton5.setBackground(new java.awt.Color(129, 178, 154));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(61, 64, 91));
         jButton5.setText("Back");
+        jButton5.setBorderPainted(false);
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButton5MouseEntered(evt);

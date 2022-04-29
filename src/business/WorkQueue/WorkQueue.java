@@ -16,6 +16,8 @@ public class WorkQueue {
     private ArrayList<PsychiatristWorkRequest> psychiatristWorkRequestList;
     private ArrayList<DrWorkRequest> DoctorworkRequestList;
     private ArrayList<PharmacistWorkRequest> PharmacistWorkRequest;
+    private ArrayList<LabAssistantWorkRequest> LabAssistanceWorkRequest;
+
     
 
     public WorkQueue() {
@@ -23,6 +25,8 @@ public class WorkQueue {
         psychiatristWorkRequestList=new ArrayList<PsychiatristWorkRequest>();
         DoctorworkRequestList = new ArrayList<DrWorkRequest>();
         PharmacistWorkRequest = new ArrayList<PharmacistWorkRequest>();
+        LabAssistanceWorkRequest = new ArrayList<LabAssistantWorkRequest>();
+
     }
 
     public ArrayList<PharmacistWorkRequest> getPharmacistWorkRequest() {
@@ -36,6 +40,9 @@ public class WorkQueue {
     
     public ArrayList<DrWorkRequest> getDoctorworkRequestList() {
         return DoctorworkRequestList;
+    }
+    public ArrayList<LabAssistantWorkRequest> getLabAssistanceWorkRequest() {
+        return LabAssistanceWorkRequest;
     }
 
     public void setDoctorworkRequestList(ArrayList<DrWorkRequest> DoctorworkRequestList) {
@@ -54,6 +61,9 @@ public class WorkQueue {
     }
      public void setPsychiatristWorkRequestList(ArrayList<PsychiatristWorkRequest> psychiatristWorkRequestList) {
         this.psychiatristWorkRequestList = psychiatristWorkRequestList;
+    }
+     public void setLabAssistanceWorkRequest(ArrayList<LabAssistantWorkRequest> LabAssistanceWorkRequest) {
+        this.LabAssistanceWorkRequest = LabAssistanceWorkRequest;
     }
     public int getcountbytypesa(String type)
     {

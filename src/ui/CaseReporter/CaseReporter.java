@@ -73,11 +73,11 @@ public class CaseReporter extends javax.swing.JPanel {
 
         jVolunteerSplitPanel.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel09.setBackground(new java.awt.Color(253, 235, 208));
+        jPanel09.setBackground(new java.awt.Color(129, 178, 154));
         jPanel09.setLayout(new java.awt.GridBagLayout());
 
         lblCaseReporter.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
-        lblCaseReporter.setForeground(new java.awt.Color(51, 102, 255));
+        lblCaseReporter.setForeground(new java.awt.Color(61, 64, 91));
         lblCaseReporter.setText("Welcome Case Reporter");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -88,17 +88,17 @@ public class CaseReporter extends javax.swing.JPanel {
         jPanel09.add(lblCaseReporter, gridBagConstraints);
 
         btnViewStatus.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnViewStatus.setForeground(new java.awt.Color(51, 102, 255));
+        btnViewStatus.setForeground(new java.awt.Color(61, 64, 91));
         btnViewStatus.setText("View Status");
         btnViewStatus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnViewStatus.setBorderPainted(false);
         btnViewStatus.setContentAreaFilled(false);
         btnViewStatus.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnViewStatusMouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnViewStatusMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnViewStatusMouseExited(evt);
             }
         });
         btnViewStatus.addActionListener(new java.awt.event.ActionListener() {
@@ -116,17 +116,17 @@ public class CaseReporter extends javax.swing.JPanel {
         jPanel09.add(btnViewStatus, gridBagConstraints);
 
         btnReport.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnReport.setForeground(new java.awt.Color(51, 102, 255));
+        btnReport.setForeground(new java.awt.Color(61, 64, 91));
         btnReport.setText("Report");
         btnReport.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnReport.setBorderPainted(false);
         btnReport.setContentAreaFilled(false);
         btnReport.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnReportMouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnReportMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnReportMouseExited(evt);
             }
         });
         btnReport.addActionListener(new java.awt.event.ActionListener() {

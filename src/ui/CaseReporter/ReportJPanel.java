@@ -59,7 +59,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         lblDetails = new javax.swing.JLabel();
         lblSuspect = new javax.swing.JLabel();
         lblNameofSuspect = new javax.swing.JLabel();
-        txtChildName = new javax.swing.JTextField();
+        txtVictimName = new javax.swing.JTextField();
         friendRadioButton = new javax.swing.JRadioButton();
         parentRadioButton = new javax.swing.JRadioButton();
         txtSuspectName = new javax.swing.JTextField();
@@ -78,11 +78,12 @@ public class ReportJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(244, 241, 222));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         namesurvivorjLabel.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        namesurvivorjLabel.setText("Name of Child : ");
+        namesurvivorjLabel.setForeground(new java.awt.Color(61, 64, 91));
+        namesurvivorjLabel.setText("Name of Victim : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -94,6 +95,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel1.add(namesurvivorjLabel, gridBagConstraints);
 
         relationjLabel.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        relationjLabel.setForeground(new java.awt.Color(61, 64, 91));
         relationjLabel.setText("Relation with Survivor : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -105,6 +107,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel1.add(relationjLabel, gridBagConstraints);
 
         lblType.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblType.setForeground(new java.awt.Color(61, 64, 91));
         lblType.setText("Type of Incident:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -118,6 +121,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel1.add(lblType, gridBagConstraints);
 
         lblLocation.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblLocation.setForeground(new java.awt.Color(61, 64, 91));
         lblLocation.setText("Location of Incident :");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -129,6 +133,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel1.add(lblLocation, gridBagConstraints);
 
         lblDate.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblDate.setForeground(new java.awt.Color(61, 64, 91));
         lblDate.setText("Date of Incident :");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -141,6 +146,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel1.add(lblDate, gridBagConstraints);
 
         lblDetails.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblDetails.setForeground(new java.awt.Color(61, 64, 91));
         lblDetails.setText("More Details : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -152,6 +158,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel1.add(lblDetails, gridBagConstraints);
 
         lblSuspect.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblSuspect.setForeground(new java.awt.Color(61, 64, 91));
         lblSuspect.setText("Suspect :");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -163,6 +170,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel1.add(lblSuspect, gridBagConstraints);
 
         lblNameofSuspect.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblNameofSuspect.setForeground(new java.awt.Color(61, 64, 91));
         lblNameofSuspect.setText("Name of Suspect : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -173,9 +181,9 @@ public class ReportJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(6, 190, 0, 0);
         jPanel1.add(lblNameofSuspect, gridBagConstraints);
 
-        txtChildName.addActionListener(new java.awt.event.ActionListener() {
+        txtVictimName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtChildNameActionPerformed(evt);
+                txtVictimNameActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -185,7 +193,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 155;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 23, 0, 0);
-        jPanel1.add(txtChildName, gridBagConstraints);
+        jPanel1.add(txtVictimName, gridBagConstraints);
 
         friendRadioButton.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         friendRadioButton.setText("Friend");
@@ -301,10 +309,11 @@ public class ReportJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(11, 23, 0, 0);
         jPanel1.add(dateOfIncident, gridBagConstraints);
 
-        ReportjButton.setBackground(new java.awt.Color(51, 102, 255));
+        ReportjButton.setBackground(new java.awt.Color(129, 178, 154));
         ReportjButton.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        ReportjButton.setForeground(new java.awt.Color(255, 255, 255));
+        ReportjButton.setForeground(new java.awt.Color(61, 64, 91));
         ReportjButton.setText("Report");
+        ReportjButton.setBorderPainted(false);
         ReportjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ReportjButtonActionPerformed(evt);
@@ -343,6 +352,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel1.add(txtAgeofChild, gridBagConstraints);
 
         lblAgeofChild.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblAgeofChild.setForeground(new java.awt.Color(61, 64, 91));
         lblAgeofChild.setText("Age :");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -352,12 +362,12 @@ public class ReportJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(1, 280, 0, 0);
         jPanel1.add(lblAgeofChild, gridBagConstraints);
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 844, 633));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 633));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtChildNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChildNameActionPerformed
+    private void txtVictimNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVictimNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtChildNameActionPerformed
+    }//GEN-LAST:event_txtVictimNameActionPerformed
 
     private void parentRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parentRadioButtonActionPerformed
         // TODO add your handling code here:
@@ -373,7 +383,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         request.setStatus("Waiting");
         request.setSender(userAccount);
 
-        request.setChildName(txtChildName.getText());
+        request.setChildName(txtVictimName.getText());
         request.setEmail(txtAgeofChild.getText());
         //for choosing relations
         if(friendRadioButton.isSelected())
@@ -448,7 +458,7 @@ public class ReportJPanel extends javax.swing.JPanel {
             }
 
             
-            txtChildName.setText("");
+            txtVictimName.setText("");
             txtSuspectName.setText("");
             txtMoreDetails.setText("");
             txtLocation.setText("");
@@ -494,10 +504,10 @@ public class ReportJPanel extends javax.swing.JPanel {
     private javax.swing.JRadioButton parentRadioButton;
     private javax.swing.JLabel relationjLabel;
     private javax.swing.JTextField txtAgeofChild;
-    private javax.swing.JTextField txtChildName;
     private javax.swing.JTextField txtLocation;
     private javax.swing.JTextField txtMoreDetails;
     private javax.swing.JTextField txtSuspectName;
+    private javax.swing.JTextField txtVictimName;
     private javax.swing.JRadioButton unknownRadioButton;
     // End of variables declaration//GEN-END:variables
 }

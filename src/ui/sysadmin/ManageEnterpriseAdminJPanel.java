@@ -111,7 +111,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         comboBoxSelectEnterprise = new javax.swing.JComboBox();
         btnDelete = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(244, 241, 222));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblManageEnterpriseAdmins.setBackground(new java.awt.Color(255, 255, 255));

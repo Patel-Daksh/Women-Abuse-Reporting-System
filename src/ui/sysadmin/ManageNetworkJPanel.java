@@ -89,7 +89,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(244, 241, 222));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblManageNetworks.setBackground(new java.awt.Color(255, 255, 255));
@@ -133,37 +133,23 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         });
         add(txtEnterNameOfNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 216, -1));
 
-        btnAddNewNetwork.setBackground(new java.awt.Color(51, 102, 255));
+        btnAddNewNetwork.setBackground(new java.awt.Color(129, 178, 154));
         btnAddNewNetwork.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnAddNewNetwork.setForeground(new java.awt.Color(61, 64, 91));
         btnAddNewNetwork.setText("ADD");
-        btnAddNewNetwork.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnAddNewNetworkMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnAddNewNetworkMouseExited(evt);
-            }
-        });
+        btnAddNewNetwork.setBorderPainted(false);
         btnAddNewNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddNewNetworkActionPerformed(evt);
             }
         });
-        add(btnAddNewNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 90, -1));
+        add(btnAddNewNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 110, -1));
 
-        btnDeleteNetwork.setBackground(new java.awt.Color(51, 102, 255));
+        btnDeleteNetwork.setBackground(new java.awt.Color(129, 178, 154));
         btnDeleteNetwork.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnDeleteNetwork.setForeground(new java.awt.Color(61, 64, 91));
         btnDeleteNetwork.setText("Remove");
-        btnDeleteNetwork.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnDeleteNetworkMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnDeleteNetworkMouseExited(evt);
-            }
-        });
+        btnDeleteNetwork.setBorderPainted(false);
         btnDeleteNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteNetworkActionPerformed(evt);
@@ -171,40 +157,34 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         });
         add(btnDeleteNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 190, 120, -1));
 
-        jButton2.setBackground(new java.awt.Color(51, 102, 255));
+        jButton2.setBackground(new java.awt.Color(129, 178, 154));
         jButton2.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(61, 64, 91));
         jButton2.setText("View Cases");
+        jButton2.setBorderPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 120, -1));
 
-        jButton3.setBackground(new java.awt.Color(51, 102, 255));
+        jButton3.setBackground(new java.awt.Color(129, 178, 154));
         jButton3.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(61, 64, 91));
         jButton3.setText("Report");
+        jButton3.setBorderPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 232, -1, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 110, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtEnterNameOfNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEnterNameOfNetworkActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEnterNameOfNetworkActionPerformed
-
-    private void btnAddNewNetworkMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddNewNetworkMouseEntered
-               btnAddNewNetwork.setForeground(new Color(0,128,128));        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddNewNetworkMouseEntered
-
-    private void btnAddNewNetworkMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddNewNetworkMouseExited
-               btnAddNewNetwork.setForeground(Color.black);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddNewNetworkMouseExited
 
     private void btnAddNewNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewNetworkActionPerformed
         // TODO add your handling code here:
@@ -222,14 +202,6 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         populateNetworkTable();
         txtEnterNameOfNetwork.setText("");
     }//GEN-LAST:event_btnAddNewNetworkActionPerformed
-
-    private void btnDeleteNetworkMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteNetworkMouseEntered
-        btnDeleteNetwork.setForeground(new Color(0,128,128));// TODO add your handling code here:
-    }//GEN-LAST:event_btnDeleteNetworkMouseEntered
-
-    private void btnDeleteNetworkMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteNetworkMouseExited
-          btnDeleteNetwork.setForeground(Color.black);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDeleteNetworkMouseExited
 
     private void btnDeleteNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteNetworkActionPerformed
         // TODO add your handling code here:

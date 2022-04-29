@@ -75,10 +75,14 @@ public class CounsellorEncounterJPanel extends javax.swing.JPanel {
         txtAreaMinutesofMeeting = new javax.swing.JTextArea();
         txtName = new javax.swing.JTextField();
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        setBackground(new java.awt.Color(244, 241, 222));
+
+        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblHeader.setForeground(new java.awt.Color(61, 64, 91));
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Encounters");
 
+        lblName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblName.setText("Patient Name:");
 
@@ -95,9 +99,9 @@ public class CounsellorEncounterJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblCounsellorEncounterDetails);
 
-        btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnUpdate.setBackground(new java.awt.Color(129, 178, 154));
+        btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnUpdate.setText("Update");
-        btnUpdate.setBorderPainted(false);
         btnUpdate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnUpdateMouseEntered(evt);
@@ -112,9 +116,9 @@ public class CounsellorEncounterJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnBack.setBackground(new java.awt.Color(129, 178, 154));
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnBack.setText("Back");
-        btnBack.setBorderPainted(false);
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnBackMouseEntered(evt);
@@ -129,6 +133,7 @@ public class CounsellorEncounterJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblEncounterNo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblEncounterNo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblEncounterNo.setText("Encounter no.");
 
@@ -138,6 +143,7 @@ public class CounsellorEncounterJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblMinutesofMeeting.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblMinutesofMeeting.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblMinutesofMeeting.setText("Minutes of Meeting:");
 
@@ -170,7 +176,7 @@ public class CounsellorEncounterJPanel extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(105, 105, 105)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
                 .addGap(62, 62, 62))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

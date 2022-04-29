@@ -64,9 +64,9 @@ public class CounsellorJPanel extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(253, 235, 208));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel1.setText("Welcome Counsellar");
+        jLabel1.setFont(new java.awt.Font("Monaco", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(61, 64, 91));
+        jLabel1.setText("Welcome Counselor");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -82,7 +82,7 @@ public class CounsellorJPanel extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 454, Short.MAX_VALUE)
+            .addGap(0, 610, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

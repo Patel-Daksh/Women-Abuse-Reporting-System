@@ -16,13 +16,13 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author dax98
+ * @author abhishekbagdare
  */
 
 public class AdmitNewVictimJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AdmitNewVictimJPanel
+     * Creates new form AdmitNewChildJPanel
      */
     JPanel userProcessContainer;
     EcoSystem system;
@@ -50,14 +50,14 @@ public class AdmitNewVictimJPanel extends javax.swing.JPanel {
         txtChildsName = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
 
         jLabel1.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setText("Admit New Victim");
 
         jLabel2.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        jLabel2.setText("Victim's Name");
+        jLabel2.setText("Victim Name");
 
         txtChildsName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,7 +68,7 @@ public class AdmitNewVictimJPanel extends javax.swing.JPanel {
         jButton1.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jButton1.setText("Admit");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -79,7 +79,7 @@ public class AdmitNewVictimJPanel extends javax.swing.JPanel {
                 "Victim's Name", "Victim's Age"
             }
         ));
-        jScrollPane1.setViewportView(jTable2);
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -115,8 +115,10 @@ public class AdmitNewVictimJPanel extends javax.swing.JPanel {
                         .addGap(32, 32, 32)
                         .addComponent(jButton1))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
+
+        jLabel1.getAccessibleContext().setAccessibleName("Admit New Victim");
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtChildsNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChildsNameActionPerformed
@@ -131,7 +133,7 @@ public class AdmitNewVictimJPanel extends javax.swing.JPanel {
     }
     
     private void populatetable() {
-        DefaultTableModel model= (DefaultTableModel) jTable2.getModel();
+        DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
         Object[] row=new Object[2];
         model.setRowCount(0);
         try{ for(Victim C : request.getChildren())
@@ -150,7 +152,7 @@ public class AdmitNewVictimJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtChildsName;
     // End of variables declaration//GEN-END:variables
 }

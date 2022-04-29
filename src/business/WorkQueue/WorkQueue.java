@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author moksh
  */
 public class WorkQueue {
-    
+
     private ArrayList<CaseReporterWorkRequest> caseReporterWorkRequestList;
     private ArrayList<LawyerWorkRequest> LawyerworkRequestList;
     private ArrayList<PsychiatristWorkRequest> psychiatristWorkRequestList;
@@ -20,7 +20,6 @@ public class WorkQueue {
     private ArrayList<LabAssistantWorkRequest> LabAssistanceWorkRequest;
     private ArrayList<PharmacistWorkRequest> PharmacistWorkRequest;
 
-    
 
     public WorkQueue() {
         caseReporterWorkRequestList = new ArrayList<CaseReporterWorkRequest>();
@@ -30,7 +29,6 @@ public class WorkQueue {
         DoctorworkRequestList = new ArrayList<DrWorkRequest>();
         LabAssistanceWorkRequest = new ArrayList<LabAssistantWorkRequest>();
         PharmacistWorkRequest = new ArrayList<PharmacistWorkRequest>();
-
     }
 
     public ArrayList<CaseReporterWorkRequest> getCaseReporterWorkRequestList() {
@@ -88,14 +86,14 @@ public class WorkQueue {
     public void setPharmacistWorkRequest(ArrayList<PharmacistWorkRequest> PharmacistWorkRequest) {
         this.PharmacistWorkRequest = PharmacistWorkRequest;
     }
-    
+
     public int getcountbytypesa(String type)
     {
         int count=0;
-        
+
         for(CaseReporterWorkRequest hp: caseReporterWorkRequestList)
         {
-            
+
             if(hp.getAssaultType().equalsIgnoreCase(type))
             {
                 count++;

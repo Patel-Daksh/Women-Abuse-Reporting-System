@@ -28,6 +28,7 @@ import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author dax98
+
  */
 public class LawyerRequestJPanel extends javax.swing.JPanel {
 

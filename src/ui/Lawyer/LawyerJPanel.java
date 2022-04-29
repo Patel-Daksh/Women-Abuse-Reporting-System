@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 /**
  *
  * @author dax98
+
  */
 public class LawyerJPanel extends javax.swing.JPanel {
 

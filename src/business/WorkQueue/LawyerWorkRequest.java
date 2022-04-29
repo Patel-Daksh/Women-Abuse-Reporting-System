@@ -11,6 +11,7 @@ import java.util.ArrayList;
 /**
  *
  * @author dax98
+
  */
 public class LawyerWorkRequest extends WorkRequest {
       CaseReporterWorkRequest CaseReporterWorkRequest;

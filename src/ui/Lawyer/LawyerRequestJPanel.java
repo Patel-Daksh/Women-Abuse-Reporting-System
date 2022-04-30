@@ -234,11 +234,11 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
         int selectedRow = tblLawyerManageRequest.getSelectedRow();
         String sta=tblLawyerManageRequest.getValueAt(selectedRow, 2).toString();
         String status="Waiting";
-        if(sta.equalsIgnoreCase(status))
-        {
-            JOptionPane.showMessageDialog(null, "Access Denied");
-        }
-        else{
+//        if(sta.equalsIgnoreCase(status))
+//        {
+//            JOptionPane.showMessageDialog(null, "Access Denied");
+//        }
+//        else{
             if (selectedRow < 0){
                 return;
             }
@@ -255,7 +255,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
                 layout.next(userProcessContainer);
                 /*CaseReportJPanel casereportJPanel=new CaseReportJPanel(userProcessContainer,system,request);
                 casereportJPanel.setVisible(true);*/
-            }
+           // }
 
         }
         // TODO add your handling code here:
@@ -275,11 +275,11 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
 
         String sta=tblLawyerManageRequest.getValueAt(selectedRow, 2).toString();
         String status="Waiting";
-        if(sta.equalsIgnoreCase(status))
-        {
-            JOptionPane.showMessageDialog(null, "Access Denied");
-        }
-        else{
+//        if(sta.equalsIgnoreCase(status))
+//        {
+//            JOptionPane.showMessageDialog(null, "Access Denied");
+//        }
+//        else{
             if (selectedRow < 0){
                 return;
             }
@@ -287,13 +287,14 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
 
             if (request.getReceiver()!=userAccount){
                 JOptionPane.showMessageDialog(this, "You cannot view the report of this case. Access Denied.");
-            }else{
+            }
+            else{
                 LawyerEncounterJPanel lencounterJPanel = new LawyerEncounterJPanel(userProcessContainer,system,userAccount,network,organization,request);
                 userProcessContainer.add("caseReportJPanel", lencounterJPanel);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }
-        }
+       // }
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEncounterActionPerformed
 

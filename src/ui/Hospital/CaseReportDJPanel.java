@@ -91,32 +91,40 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(244, 241, 222));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        namesurvivorjLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         namesurvivorjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         namesurvivorjLabel.setText("Name of Survivor : ");
 
+        relationjLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         relationjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         relationjLabel.setText("Relation with Survivor : ");
 
+        typejLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         typejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         typejLabel.setText("Type of Sexual Assault : ");
 
+        locationjLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         locationjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         locationjLabel.setText("Location of Incident :");
 
+        timejLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         timejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         timejLabel.setText("Date of Incident :");
 
+        detailsjLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         detailsjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         detailsjLabel.setText("More Details : ");
 
+        suspecttypejLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         suspecttypejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         suspecttypejLabel.setText("Suspect :");
 
+        namesuspectjLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         namesuspectjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         namesuspectjLabel.setText("Name of Suspect : ");
 
@@ -138,9 +146,9 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(129, 178, 154));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Request Lab Test");
-        jButton1.setBorderPainted(false);
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButton1MouseEntered(evt);
@@ -155,9 +163,9 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(129, 178, 154));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("View Lab Test");
-        jButton3.setBorderPainted(false);
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButton3MouseEntered(evt);
@@ -172,9 +180,9 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(129, 178, 154));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText("Prescribe Medicines");
-        jButton2.setBorderPainted(false);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButton2MouseEntered(evt);
@@ -189,12 +197,29 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton4.setBackground(new java.awt.Color(129, 178, 154));
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setText("Send Invite");
-        jButton4.setBorderPainted(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setBackground(new java.awt.Color(129, 178, 154));
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jButton5.setText("Back");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton5MouseExited(evt);
+            }
+        });
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
             }
         });
 
@@ -203,7 +228,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 142, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton4)
@@ -234,11 +259,16 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(namesurvivorjLabel)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -272,7 +302,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(namesuspectjLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 86, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 85, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3)
@@ -290,28 +320,6 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(33, 24, 182, 146);
         jPanel1.add(jPanel2, gridBagConstraints);
-
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton5.setText("Back");
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton5MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton5MouseExited(evt);
-            }
-        });
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(74, 14, 0, 0);
-        jPanel1.add(jButton5, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

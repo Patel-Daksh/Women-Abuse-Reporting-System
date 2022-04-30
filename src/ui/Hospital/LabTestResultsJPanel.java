@@ -5,7 +5,10 @@
  */
 package ui.Hospital;
 
+import ui.Lab.*;
 import business.EcoSystem;
+import business.WorkQueue.LabAssistantWorkRequest;
+import business.WorkQueue.LabTest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -17,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author dax98
+ * @author shah0
  */
 public class LabTestResultsJPanel extends javax.swing.JPanel {
 
@@ -26,10 +29,12 @@ public class LabTestResultsJPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem system;
-    public LabTestResultsJPanel(JPanel userProcessContainer, EcoSystem system) {
+    LabAssistantWorkRequest request;
+    public LabTestResultsJPanel(JPanel userProcessContainer, EcoSystem system,LabAssistantWorkRequest request) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
+        this.request = request;
         PopulateReport();
     }
 
@@ -208,7 +213,10 @@ public class LabTestResultsJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void PopulateReport() {
- 
+        jTextField1.setText(request.getSender().toString());
+        jTextField2.setText(request.getDoctorWorkRequest().getCaseReporterWorkRequest().getChildName());
+        jTextField3.setText(request.getReceiver().toString());
+        PopulateTable();
     }
 
     private void PopulateTable() {
@@ -216,7 +224,14 @@ public class LabTestResultsJPanel extends javax.swing.JPanel {
         Object[] row=new Object[2];
         model.setRowCount(0);
         
-  
+         for(LabTest LT: request.getLabTestList())
+         {
+         
+            row[0]= LT;
+            row[1] = LT.getResult();
+            
+            model.addRow(row);
+        }
         
     }
 

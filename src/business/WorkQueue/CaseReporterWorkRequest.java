@@ -25,11 +25,43 @@ public class CaseReporterWorkRequest extends WorkRequest{
     private String suspecttype;
     private String nameofsuspect;
     private String email;
-//    private DrWorkRequest doctorWorkRequest;
-//    private CounsellorWorkRequest counsellorWorkRequest;
-//    private LawyerWorkRequest lawyerWorkRequest;
-//    private PsychiatristWorkRequest hpWorkRequest;
-//    
+    private DrWorkRequest doctorWorkRequest;
+    private CounsellorWorkRequest counsellorWorkRequest;
+    private LawyerWorkRequest lawyerWorkRequest;
+    private PsychiatristWorkRequest hpWorkRequest;
+
+    public DrWorkRequest getDoctorWorkRequest() {
+        return doctorWorkRequest;
+    }
+
+    public void setDoctorWorkRequest(DrWorkRequest doctorWorkRequest) {
+        this.doctorWorkRequest = doctorWorkRequest;
+    }
+
+    public CounsellorWorkRequest getCounsellorWorkRequest() {
+        return counsellorWorkRequest;
+    }
+
+    public void setCounsellorWorkRequest(CounsellorWorkRequest counsellorWorkRequest) {
+        this.counsellorWorkRequest = counsellorWorkRequest;
+    }
+
+    public LawyerWorkRequest getLawyerWorkRequest() {
+        return lawyerWorkRequest;
+    }
+
+    public void setLawyerWorkRequest(LawyerWorkRequest lawyerWorkRequest) {
+        this.lawyerWorkRequest = lawyerWorkRequest;
+    }
+
+    public PsychiatristWorkRequest getHpWorkRequest() {
+        return hpWorkRequest;
+    }
+
+    public void setHpWorkRequest(PsychiatristWorkRequest hpWorkRequest) {
+        this.hpWorkRequest = hpWorkRequest;
+    }
+    
     public String getRelation() {
         return relation;
     }

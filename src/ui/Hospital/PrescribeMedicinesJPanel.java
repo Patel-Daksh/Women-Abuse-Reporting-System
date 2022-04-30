@@ -6,6 +6,8 @@
 package ui.Hospital;
 
 import business.EcoSystem;
+import business.WorkQueue.Medicines;
+import business.WorkQueue.PharmacistWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -16,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author dax98
+ * @author shah0
  */
 public class PrescribeMedicinesJPanel extends javax.swing.JPanel {
 
@@ -25,10 +27,12 @@ public class PrescribeMedicinesJPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem system;
-    public PrescribeMedicinesJPanel(JPanel userProcessContainer, EcoSystem system) {
+    PharmacistWorkRequest pRequest;
+    public PrescribeMedicinesJPanel(JPanel userProcessContainer, EcoSystem system,PharmacistWorkRequest pRequest) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
+        this.pRequest = pRequest;
         populatereport();
     }
 
@@ -279,6 +283,11 @@ public class PrescribeMedicinesJPanel extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        Medicines M = new Medicines(jTextField5.getText(),Integer.parseInt(jTextField3.getText()));
+        pRequest.getMedicines().add(M);
+        populatetable();
+        jTextField3.setText("");
+        jTextField5.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -326,6 +335,10 @@ public class PrescribeMedicinesJPanel extends javax.swing.JPanel {
 
     private void populatereport() {
         Date date = new Date();
+        pRequest.setRequestDate(date);
+        jTextField2.setText(date.toString());
+        jTextField1.setText(pRequest.getSender().toString());
+        jTextField4.setText(pRequest.getDoctorWorkRequest().getCaseReporterWorkRequest().getChildName());
         populatetable();
         
     }
@@ -335,5 +348,14 @@ public class PrescribeMedicinesJPanel extends javax.swing.JPanel {
         Object[] row=new Object[2];
         model.setRowCount(0);
         
+         for(Medicines M : pRequest.getMedicines())
+         {
+         
+            row[0]=M;
+            row[1]=M.getAmount();
+            
+            model.addRow(row);
+            
+        }
     }
 }

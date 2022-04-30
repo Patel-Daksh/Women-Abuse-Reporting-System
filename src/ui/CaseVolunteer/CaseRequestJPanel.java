@@ -12,6 +12,10 @@ import business.Organization.CaseVolunteerOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.CounsellorWorkRequest;
+import business.WorkQueue.DrWorkRequest;
+import business.WorkQueue.LawyerWorkRequest;
+import business.WorkQueue.PsychiatristWorkRequest;
 import business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -338,7 +342,68 @@ public class CaseRequestJPanel extends javax.swing.JPanel {
             lblLawyer.setVisible(true);
             lblPsychiatrist.setVisible(true);
             CaseReporterWorkRequest  CRWorkReq  = (CaseReporterWorkRequest) tblCaseRequest.getValueAt(selectedRow, 2);
+            
+            if(CRWorkReq.getDoctorWorkRequest()!=null){
+                DrWorkRequest D = CRWorkReq.getDoctorWorkRequest();
+                txtDoctorDate.setText(D.getRequestDate().toString());
+                if(D.getReceiver()==null){
+                    txtDocReceiver.setText("Not Assigned");
+                }else{
+                    txtDocReceiver.setText(D.getReceiver().toString());
+                }
+                txtDocStatus.setText(D.getStatus());
+            }else{
+                txtDoctorDate.setText("-");
+                txtDocReceiver.setText("-");
+                txtDocStatus.setText("-");
+            }
 
+            if(CRWorkReq.getCounsellorWorkRequest()!=null){
+                CounsellorWorkRequest C = CRWorkReq.getCounsellorWorkRequest();
+                txtCounsellarDate.setText(C.getRequestDate().toString());
+                if(C.getReceiver()==null){
+                    txtCounsellarReceiver.setText("Not Assigned");
+                }else{
+                    txtCounsellarReceiver.setText(C.getReceiver().toString());
+                }
+                txtCousellarStatus.setText(C.getStatus());
+            }else{
+                txtCounsellarDate.setText("-");
+                txtCounsellarReceiver.setText("-");
+                txtCousellarStatus.setText("-");
+            }
+
+            if(CRWorkReq.getHpWorkRequest()!=null){
+                PsychiatristWorkRequest P = CRWorkReq.getHpWorkRequest();
+                txtPsyhDate.setText(P.getRequestDate().toString());
+                if(P.getReceiver()==null){
+                    txtPsychReceiver.setText("Not Assigned");
+                }else{
+                    txtPsychReceiver.setText(P.getReceiver().toString());
+                }
+                txtPsychStatus.setText(P.getStatus());
+            }else{
+                txtPsychStatus.setText("-");
+                txtPsyhDate.setText("-");
+                txtPsychReceiver.setText("-");
+            }
+
+            if(CRWorkReq.getLawyerWorkRequest()!=null){
+                LawyerWorkRequest L = CRWorkReq.getLawyerWorkRequest();
+                txtLawyerDate.setText(L.getRequestDate().toString());
+                if(L.getReceiver()==null){
+                    txtLawyerReceiver.setText("Not Assigned");
+                }else{
+                    txtLawyerReceiver.setText(L.getReceiver().toString());
+                }
+                txtLawyerStatus.setText(L.getStatus());
+            }else{
+                txtLawyerDate.setText("-");
+                txtLawyerReceiver.setText("-");
+                txtLawyerStatus.setText("-");
+            }
+
+       
         }
     }//GEN-LAST:event_btnCheckStatusActionPerformed
 

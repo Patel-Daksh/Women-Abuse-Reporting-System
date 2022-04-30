@@ -11,8 +11,17 @@ package business.WorkQueue;
  */
 public class DrWorkRequest extends WorkRequest{
       CaseReporterWorkRequest CaseReporterWorkRequest;
+    LabAssistantWorkRequest LabAssistanceWorkRequest;
     PharmacistWorkRequest PharmacistWorkRequest;
-   
+    RehabilitationCaretakerWorkRequest  rehabilitationCaretakerWorkRequest;
+
+    public RehabilitationCaretakerWorkRequest getRehabilitationCaretakerWorkRequest() {
+        return rehabilitationCaretakerWorkRequest;
+    }
+
+    public void setRehabilitationCaretakerWorkRequest(RehabilitationCaretakerWorkRequest rehabilitationCaretakerWorkRequest) {
+        this.rehabilitationCaretakerWorkRequest = rehabilitationCaretakerWorkRequest;
+    }
     private String docsign;
 
     public CaseReporterWorkRequest getCaseReporterWorkRequest() {
@@ -29,6 +38,14 @@ public class DrWorkRequest extends WorkRequest{
 
     public void setDocsign(String docsign) {
         this.docsign = docsign;
+    }
+
+    public LabAssistantWorkRequest getLabAssistanceWorkRequest() {
+        return LabAssistanceWorkRequest;
+    }
+
+    public void setLabAssistanceWorkRequest(LabAssistantWorkRequest LabAssistanceWorkRequest) {
+        this.LabAssistanceWorkRequest = LabAssistanceWorkRequest;
     }
 
     public PharmacistWorkRequest getPharmacistWorkRequest() {

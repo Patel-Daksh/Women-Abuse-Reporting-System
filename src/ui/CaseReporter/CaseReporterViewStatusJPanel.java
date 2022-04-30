@@ -13,6 +13,10 @@ import business.Organization.CaseReporterOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.CounsellorWorkRequest;
+import business.WorkQueue.DrWorkRequest;
+import business.WorkQueue.LawyerWorkRequest;
+import business.WorkQueue.PsychiatristWorkRequest;
 import java.awt.Color;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -306,7 +310,71 @@ public class CaseReporterViewStatusJPanel extends javax.swing.JPanel {
                      }else{
                          txtCaseVolunteer.setText(CaseRepoWorkReq.getReceiver().toString());
                      }
-                     txtCaseVolunteerStatus.setText(CaseRepoWorkReq.getStatus());}}
+                     txtCaseVolunteerStatus.setText(CaseRepoWorkReq.getStatus());
+                     
+                        if(CaseRepoWorkReq.getDoctorWorkRequest()!=null){
+                            DrWorkRequest D = CaseRepoWorkReq.getDoctorWorkRequest(); 
+                            txtDoctorDate.setText(D.getRequestDate().toString());
+                        if(D.getReceiver()==null){
+                            txtDoctor.setText("Not Assigned");
+                        }else{
+                            txtDoctor.setText(D.getReceiver().toString());
+                        }
+                        txtDoctorStatus.setText(D.getStatus());
+                        }else{
+                            txtDoctorDate.setText("-");
+                            txtDoctor.setText("-");
+                            txtDoctorStatus.setText("-");
+                        }
+                        
+                        if(CaseRepoWorkReq.getCounsellorWorkRequest()!=null){
+                            CounsellorWorkRequest C = CaseRepoWorkReq.getCounsellorWorkRequest(); 
+                            txtCounsellorDate.setText(C.getRequestDate().toString());
+                        if(C.getReceiver()==null){
+                            txtCOunsellor.setText("Not Assigned");
+                        }else{
+                            txtCOunsellor.setText(C.getReceiver().toString());
+                        }
+                        txtCounsellorStatus.setText(C.getStatus());
+                        }else{
+                            txtCounsellorDate.setText("-");
+                            txtCOunsellor.setText("-");
+                            txtCounsellorStatus.setText("-");
+                        }
+                        
+                        if(CaseRepoWorkReq.getHpWorkRequest()!=null){
+                            PsychiatristWorkRequest P = CaseRepoWorkReq.getHpWorkRequest(); 
+                            txtlPsychDate.setText(P.getRequestDate().toString());
+                        if(P.getReceiver()==null){
+                            txtPsych.setText("Not Assigned");
+                        }else{
+                            txtPsych.setText(P.getReceiver().toString());
+                        }
+                        txtPsychStatus.setText(P.getStatus());
+                        }else{
+                            txtlPsychDate.setText("-");
+                            txtPsych.setText("-");
+                            txtPsychStatus.setText("-");
+                        }
+                        
+                        if(CaseRepoWorkReq.getLawyerWorkRequest()!=null){
+                            LawyerWorkRequest L = CaseRepoWorkReq.getLawyerWorkRequest(); 
+                            txtLawyerDate.setText(L.getRequestDate().toString());
+                        if(L.getReceiver()==null){
+                            txtLawyer.setText("Not Assigned");
+                        }else{
+                            txtLawyer.setText(L.getReceiver().toString());
+                        }
+                        txtLawyerStatus.setText(L.getStatus());
+                        }else{
+                            txtLawyerDate.setText("-");
+                            txtLawyer.setText("-");
+                            txtLawyerStatus.setText("-");
+                        }
+                 }
+                     
+                 
+             }
     }
     
     

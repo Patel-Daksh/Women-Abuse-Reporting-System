@@ -8,6 +8,8 @@ package ui.Hospital;
 import business.EcoSystem;
 import business.Network.Network;
 import business.UserAccount.UserAccount;
+import business.WorkQueue.LabAssistantWorkRequest;
+import business.WorkQueue.LabTest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -18,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author dax98
+ * @author shah0
  */
 public class RequestLabTestJPanel extends javax.swing.JPanel {
 
@@ -28,12 +30,14 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     //userProcessContainer,system,labrequest,userAccount,network
     JPanel userProcessContainer;
     EcoSystem system;
+    LabAssistantWorkRequest labrequest;
     UserAccount userAccount;
     Network network;
-    public RequestLabTestJPanel(JPanel userProcessContainer, EcoSystem system,UserAccount userAccount,Network network) {
+    public RequestLabTestJPanel(JPanel userProcessContainer, EcoSystem system,LabAssistantWorkRequest labrequest,UserAccount userAccount,Network network) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
+        this.labrequest = labrequest;
         this.userAccount = userAccount;
         this.network = network;
         
@@ -249,7 +253,13 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2MouseExited
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:    
+        // TODO add your handling code here:
+        LabTest Lt = new LabTest(jTextField4.getText());
+        Lt.setResult("Waiting");
+        labrequest.getLabTestList().add(Lt);
+        populatetable();
+        jTextField4.setText("");
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -290,6 +300,8 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void populateform() {
+        jTextField3.setText(labrequest.getSender().toString());
+        jTextField1.setText(labrequest.getDoctorWorkRequest().getCaseReporterWorkRequest().getChildName());
         Date date = new Date();
         jTextField2.setText(date.toString());
         
@@ -298,6 +310,15 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
     private void populatetable() {
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
         Object[] row=new Object[1];
-        model.setRowCount(0);      
+        model.setRowCount(0);
+        
+         for(LabTest LT : labrequest.getLabTestList())
+         {
+         
+            row[0]=LT;
+            
+            model.addRow(row);
+        }
+        
     }
 }

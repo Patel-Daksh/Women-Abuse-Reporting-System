@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class RehabilitationCaretakerWorkRequest extends WorkRequest {
      public RehabilitationCaretakerWorkRequest rehabCaretakerWorkReq;
-    private ArrayList<Victim> children = new ArrayList<Victim>();
+    private ArrayList<Child> children = new ArrayList<Child>();
     public RehabilitationCaretakerWorkRequest getRehabCaretakerWorkReq() {
         return rehabCaretakerWorkReq;
     }
@@ -21,14 +21,14 @@ public class RehabilitationCaretakerWorkRequest extends WorkRequest {
     public void setRehabCaretakerWorkReq(RehabilitationCaretakerWorkRequest rehabCaretakerWorkReq) {
         this.rehabCaretakerWorkReq = rehabCaretakerWorkReq;
     }
-     public ArrayList<Victim> getChildren() {
+     public ArrayList<Child> getChildren() {
         return children;
     }
-     public void addChild(Victim c){
+     public void addChild(Child c){
          children.add(c);
      }
 
-    public void setChildren(ArrayList<Victim> children) {
+    public void setChildren(ArrayList<Child> children) {
         this.children = children;
     }
 }

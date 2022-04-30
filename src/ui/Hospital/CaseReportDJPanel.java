@@ -13,6 +13,8 @@ import business.Organization.Organization;
 import business.Organization.PharmacyOrganization;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.LabAssistantWorkRequest;
+import business.WorkQueue.PharmacistWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -29,7 +31,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author dax98
+ * @author shah0
  */
 public class CaseReportDJPanel extends javax.swing.JPanel {
 
@@ -93,37 +95,28 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setForeground(new java.awt.Color(61, 64, 91));
 
-        namesurvivorjLabel.setForeground(new java.awt.Color(61, 64, 91));
         namesurvivorjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         namesurvivorjLabel.setText("Name of Survivor : ");
 
-        relationjLabel.setForeground(new java.awt.Color(61, 64, 91));
         relationjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         relationjLabel.setText("Relation with Survivor : ");
 
-        typejLabel.setForeground(new java.awt.Color(61, 64, 91));
         typejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        typejLabel.setText("Type of  Assault : ");
+        typejLabel.setText("Type of Sexual Assault : ");
 
-        locationjLabel.setForeground(new java.awt.Color(61, 64, 91));
         locationjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         locationjLabel.setText("Location of Incident :");
 
-        timejLabel.setForeground(new java.awt.Color(61, 64, 91));
         timejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         timejLabel.setText("Date of Incident :");
 
-        detailsjLabel.setForeground(new java.awt.Color(61, 64, 91));
         detailsjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         detailsjLabel.setText("More Details : ");
 
-        suspecttypejLabel.setForeground(new java.awt.Color(61, 64, 91));
         suspecttypejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         suspecttypejLabel.setText("Suspect :");
 
-        namesuspectjLabel.setForeground(new java.awt.Color(61, 64, 91));
         namesuspectjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         namesuspectjLabel.setText("Name of Suspect : ");
 
@@ -145,9 +138,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(129, 178, 154));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(61, 64, 91));
         jButton1.setText("Request Lab Test");
         jButton1.setBorderPainted(false);
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -164,9 +155,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(129, 178, 154));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(61, 64, 91));
         jButton3.setText("View Lab Test");
         jButton3.setBorderPainted(false);
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -183,9 +172,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(129, 178, 154));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(61, 64, 91));
         jButton2.setText("Prescribe Medicines");
         jButton2.setBorderPainted(false);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -202,9 +189,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(129, 178, 154));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(61, 64, 91));
         jButton4.setText("Send Invite");
         jButton4.setBorderPainted(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -287,7 +272,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(namesuspectjLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 85, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 86, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3)
@@ -306,11 +291,8 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(33, 24, 182, 146);
         jPanel1.add(jPanel2, gridBagConstraints);
 
-        jButton5.setBackground(new java.awt.Color(129, 178, 154));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(61, 64, 91));
         jButton5.setText("Back");
-        jButton5.setBorderPainted(false);
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jButton5MouseEntered(evt);
@@ -375,6 +357,38 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        LabAssistantWorkRequest labrequest = new LabAssistantWorkRequest();
+        labrequest.setDoctorWorkRequest(request.getDoctorWorkRequest());
+        request.getDoctorWorkRequest().setLabAssistanceWorkRequest(labrequest);
+        labrequest.setSender(userAccount);
+        labrequest.setStatus("Waiting");
+        if (userAccount==null){
+            System.out.println("userAccount is not set");
+        }
+
+        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Wellness);
+        Organization org = null;
+        for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
+            if (organization instanceof ForensicOrganization){
+                org = organization;
+                break;
+            }
+        }
+        if (org!=null){
+            org.getWorkQueue().getLabAssistanceWorkRequest().add(labrequest);
+            //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            if(userAccount.getWrkQue().getLabAssistanceWorkRequest()==null){
+                System.out.println("True");
+            }
+            userAccount.getWrkQue().getLabAssistanceWorkRequest().add(labrequest);
+        }
+
+        RequestLabTestJPanel requestLabTestJPanel = new RequestLabTestJPanel(userProcessContainer,system,labrequest,userAccount,network);
+        userProcessContainer.add("caseReportJPanel", requestLabTestJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
+        //JOptionPane.showMessageDialog(null, "Request submitted to Forensic Department.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
@@ -386,7 +400,15 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton3MouseExited
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
+        // TODO add your handling code here:
+        //System.out.println("Status "+request.getDoctorWorkRequest().getLabAssistanceWorkRequest().getStatus());
+        if(request.getDoctorWorkRequest().getLabAssistanceWorkRequest().getStatus().equalsIgnoreCase("Waiting")){
+            JOptionPane.showMessageDialog(this, "Requested has not been acccepted yet.");
+        }else{
+            LabTestResultsJPanel requestLabTestJPanel = new LabTestResultsJPanel(userProcessContainer,system,request.getDoctorWorkRequest().getLabAssistanceWorkRequest());
+            userProcessContainer.add("caseReportJPanel", requestLabTestJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);}
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -399,6 +421,15 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2MouseExited
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        PharmacistWorkRequest prequest = new PharmacistWorkRequest();
+        prequest.setDoctorWorkRequest(request.getDoctorWorkRequest());
+        request.getDoctorWorkRequest().setPharmacistWorkRequest(prequest);
+        prequest.setSender(userAccount);
+        prequest.setStatus("Waiting");
+        if (userAccount==null){
+            System.out.println("userAccount is not set");
+        }
 
         Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Pharmaceutical);
         Organization org = null;
@@ -408,7 +439,17 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
                 break;
             }
         }
+        if (org!=null){
+            org.getWorkQueue().getPharmacistWorkRequest().add(prequest);
+            //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            if(userAccount.getWrkQue().getLabAssistanceWorkRequest()==null){
+                System.out.println("True");
+            }
+            userAccount.getWrkQue().getPharmacistWorkRequest().add(prequest);
+        }
 
+        PrescribeMedicinesJPanel requestLabTestJPanel = new PrescribeMedicinesJPanel(userProcessContainer,system,prequest);
+        userProcessContainer.add("caseReportJPanel", requestLabTestJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_jButton2ActionPerformed

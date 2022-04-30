@@ -8,18 +8,27 @@ package ui.CaseVolunteer;
 import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Network.Network;
+import business.Organization.CounsellingOrganization;
+import business.Organization.PsychiatricOrganization;
+import business.Organization.HospitalOrganization;
+import business.Organization.LegalOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
+import business.WorkQueue.CounsellorWorkRequest;
+import business.WorkQueue.DrWorkRequest;
+import business.WorkQueue.PsychiatristWorkRequest;
 import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.Child;
+import business.WorkQueue.Children;
+import business.WorkQueue.LawyerWorkRequest;
+import business.WorkQueue.RehabilitationCaretakerWorkRequest;
 import business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.util.ArrayList;
-import javax.lang.model.SourceVersion;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
 /**
  *
  * @author dax98
@@ -342,7 +351,24 @@ import javax.swing.JPanel;
     }//GEN-LAST:event_btnReqLawyerMouseExited
 
     private void btnReqLawyerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqLawyerActionPerformed
-
+        LawyerWorkRequest legalawyerequest = new LawyerWorkRequest();
+        legalawyerequest.setStatus("Waiting");
+        legalawyerequest.setSender(userAccount);
+        legalawyerequest.setCaseReporterWorkRequest(request);
+        legalawyerequest.getCaseReporterWorkRequest().setLawyerWorkRequest(legalawyerequest);
+        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Justice);
+        Organization org = null;
+        for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
+            if (organization instanceof LegalOrganization){
+                org = organization;
+                break;
+            }
+        }
+        if (org!=null){
+            org.getWorkQueue().getLawyerworkRequestList().add(legalawyerequest);
+            //userAccount.getWorkQueue().CaseReporterWorkRequestList().add(request);
+            userAccount.getWrkQue().getLawyerworkRequestList().add(legalawyerequest);
+        }
        
 
         JOptionPane.showMessageDialog(null, "Request submitted to Lawyer.");
@@ -358,7 +384,26 @@ import javax.swing.JPanel;
     }//GEN-LAST:event_btnReqPsychMouseExited
 
     private void btnReqPsychActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqPsychActionPerformed
-//        
+         PsychiatristWorkRequest psychrequest = new PsychiatristWorkRequest();
+        psychrequest.setStatus("Waiting");
+        psychrequest.setSender(userAccount);
+        psychrequest.setCaseReporterWorkRequest(request);
+        psychrequest.getCaseReporterWorkRequest().setHpWorkRequest(psychrequest);
+
+        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.NGO);
+        Organization org = null;
+        for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
+            System.out.println("ex"+organization.getName());
+            if (organization instanceof PsychiatricOrganization){
+                org = organization;
+                break;
+            }
+        }
+        if (org!=null){
+            org.getWorkQueue().getPsychiatristWorkRequestList().add(psychrequest);
+            //userAccount.getWorkQueue().CaseReporterWorkRequestList().add(request);
+            userAccount.getWrkQue().getPsychiatristWorkRequestList().add(psychrequest);
+        }
 
         JOptionPane.showMessageDialog(null, "Request submitted to Psychiatrist");
 
@@ -407,7 +452,25 @@ import javax.swing.JPanel;
     }//GEN-LAST:event_btnReqDocMouseExited
 
     private void btnReqDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqDocActionPerformed
-//        
+        DrWorkRequest docrequest = new DrWorkRequest();
+        docrequest.setStatus("Waiting");
+        docrequest.setSender(userAccount);
+        docrequest.setCaseReporterWorkRequest(request);
+        docrequest.getCaseReporterWorkRequest().setDoctorWorkRequest(docrequest);
+
+        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Wellness);
+        Organization org = null;
+        for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
+            if (organization instanceof HospitalOrganization){
+                org = organization;
+                break;
+            }
+        }
+        if (org!=null){
+            org.getWorkQueue().getDoctorworkRequestList().add(docrequest);
+            //userAccount.getWorkQueue().CaseReporterWorkRequestList().add(request);
+            userAccount.getWrkQue().getDoctorworkRequestList().add(docrequest);
+        }
 
         JOptionPane.showMessageDialog(null, "Request submitted to Hosptital.");
     }//GEN-LAST:event_btnReqDocActionPerformed
@@ -421,7 +484,27 @@ import javax.swing.JPanel;
     }//GEN-LAST:event_btnReqCounsellarMouseExited
 
     private void btnReqCounsellarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqCounsellarActionPerformed
-//        
+        CounsellorWorkRequest counsellarreq = new CounsellorWorkRequest();
+        counsellarreq.setStatus("Waiting");
+        counsellarreq.setSender(userAccount);
+        counsellarreq.setHswr(request);
+        counsellarreq.getHswr().setCounsellorWorkRequest(counsellarreq);
+
+        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Wellness);
+        Organization org = null;
+        for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
+            if (organization instanceof CounsellingOrganization){
+                org = organization;
+                break;
+            }
+        }
+        if (org!=null){
+            org.getWorkQueue().getCounsellarworkRequestList().add(counsellarreq);
+            //userAccount.getWorkQueue().CaseReporterWorkRequestList().add(request);
+            userAccount.getWrkQue().getCounsellarworkRequestList().add(counsellarreq);
+        }
+
+        JOptionPane.showMessageDialog(null, "Request submitted to Counsellar");
 
         JOptionPane.showMessageDialog(null, "Request submitted to Counsellar");
         // TODO add your handling code here:

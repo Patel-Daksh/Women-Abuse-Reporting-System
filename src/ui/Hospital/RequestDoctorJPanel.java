@@ -10,7 +10,9 @@ import business.Enterprise.Enterprise;
 import business.Network.Network;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
+import business.WorkQueue.DrWorkRequest;
 import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.RehabilitationCaretakerWorkRequest;
 import business.WorkQueue.WorkRequest;
 import ui.CaseVolunteer.CaseReportJPanel;
 import java.awt.CardLayout;
@@ -21,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author dax98
+ * @author shah0
  */
 public class RequestDoctorJPanel extends javax.swing.JPanel {
 
@@ -32,6 +34,7 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
     EcoSystem system;
     UserAccount userAccount;
     Organization organization;
+    DrWorkRequest request;
     Enterprise enterpirse;
     Network network;
     public RequestDoctorJPanel(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount,Organization organization,Network network) {
@@ -169,7 +172,10 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
 
 
             int selectedRow = jTable1.getSelectedRow();
+            WorkRequest request = (DrWorkRequest)jTable1.getValueAt(selectedRow, 2);
             if (CheckOpenCases(userAccount) == 0){
+                request.setReceiver(userAccount);
+                request.setStatus("Accepted");
                 populatetable();
             }else
             {
@@ -194,6 +200,19 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
             return;
         }
 
+        DrWorkRequest request = (DrWorkRequest)jTable1.getValueAt(selectedRow, 2);
+        request.getCaseReporterWorkRequest().setDoctorWorkRequest(request);
+
+        if (request.getReceiver()!=userAccount){
+            JOptionPane.showMessageDialog(this, "You cannot view the report of this case. Access Denied.");
+        }else{
+
+            CaseReportDJPanel caseReportJPanel = new CaseReportDJPanel(userProcessContainer,system,request.getCaseReporterWorkRequest(),userAccount,network,enterpirse,organization);
+            userProcessContainer.add("caseReportJPanel", caseReportJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+            
+        }
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -203,6 +222,11 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
         if (selectedRow < 0){
             return;
         }
+     
+        WorkRequest request = (DrWorkRequest)jTable1.getValueAt(selectedRow, 2);
+       // WorkRequest newReq= (RehabilitationCaretakerWorkRequest);
+        request.setReceiver(userAccount);
+        request.setStatus("Case Completed");
         populatetable();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -221,11 +245,35 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
         Object[] row=new Object[4];
         model.setRowCount(0);
         
+        for(DrWorkRequest request : organization.getWorkQueue().getDoctorworkRequestList())
+        {
+        
+          row[0]=request.getCaseReporterWorkRequest().getChildName();
+          row[1] = request.getCaseReporterWorkRequest().getDoi();
+          row[2] = request;  
+          if (request.getReceiver()==null){
+              row[3] = "Not Assigned";
+          }else{
+              row[3] = request.getReceiver();
+          }
+          
+          
+          model.addRow(row);
+        }
         
     }
     
     private int CheckOpenCases(UserAccount userAccount) {
         int a = 0;
+        for(DrWorkRequest request : organization.getWorkQueue().getDoctorworkRequestList())
+        {
+        
+          if (request.getReceiver()==userAccount){
+              if (request.getStatus().equalsIgnoreCase("Accepted")){
+                  a = a + 1;
+              }
+          } 
+        }
         return a; 
     }
 }

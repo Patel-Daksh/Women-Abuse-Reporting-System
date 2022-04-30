@@ -9,7 +9,7 @@ import business.EcoSystem;
 import business.Organization.PharmacyOrganization;
 import business.Organization.RehabilitationOrganization;
 import business.UserAccount.UserAccount;
-import business.WorkQueue.Victim;
+import business.WorkQueue.Child;
 import business.WorkQueue.RehabilitationCaretakerWorkRequest;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -142,11 +142,11 @@ public class AdmitNewVictimJPanel extends javax.swing.JPanel {
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
         Object[] row=new Object[2];
         model.setRowCount(0);
-        try{ for(Victim C : request.getChildren())
+        try{ for(Child C : request.getChildren())
          {
          
-            row[0]=C.getVictimAge();
-            row[1]=C.getVictimName();
+            row[0]=C.getChildAge();
+            row[1]=C.getChildName();
             
             model.addRow(row);
             

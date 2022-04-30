@@ -97,7 +97,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
         lblManageEnterprises.setBackground(new java.awt.Color(255, 255, 255));
         lblManageEnterprises.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
-        lblManageEnterprises.setForeground(new java.awt.Color(61, 64, 91));
+        lblManageEnterprises.setForeground(new java.awt.Color(230, 126, 34));
         lblManageEnterprises.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblManageEnterprises.setText("Manage Enterprises");
         add(lblManageEnterprises, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 628, 40));
@@ -133,17 +133,17 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jLabel3.setText("Network:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 121, -1, -1));
 
-        btnSubmit.setBackground(new java.awt.Color(129, 178, 154));
+        btnSubmit.setBackground(new java.awt.Color(51, 102, 255));
         btnSubmit.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnSubmit.setForeground(new java.awt.Color(61, 64, 91));
+        btnSubmit.setForeground(new java.awt.Color(255, 255, 255));
         btnSubmit.setText("Submit");
         btnSubmit.setBorderPainted(false);
         btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnSubmitMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnSubmitMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseEntered(evt);
             }
         });
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -174,17 +174,17 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         });
         add(comboBoxEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 120, -1));
 
-        btnDelete.setBackground(new java.awt.Color(129, 178, 154));
+        btnDelete.setBackground(new java.awt.Color(51, 102, 255));
         btnDelete.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(61, 64, 91));
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Delete");
         btnDelete.setBorderPainted(false);
         btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnDeleteMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnDeleteMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDeleteMouseEntered(evt);
             }
         });
         btnDelete.addActionListener(new java.awt.event.ActionListener() {

@@ -15,6 +15,13 @@ import business.EcoSystem;
 import business.Employee.Employee;
 import business.Enterprise.Enterprise;
 import business.Network.Network;
+import business.Role.HealthAdminRole;
+import business.Role.LegalAdminRole;
+import business.Role.NGOAdminRole;
+import business.Role.PharmacyAdminRole;
+import business.Role.PsychiatristRole;
+import business.Role.RehabilitationCaretaker;
+//import Business.Role.AdminRole;
 import business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -111,12 +118,12 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         comboBoxSelectEnterprise = new javax.swing.JComboBox();
         btnDelete = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(244, 241, 222));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblManageEnterpriseAdmins.setBackground(new java.awt.Color(255, 255, 255));
         lblManageEnterpriseAdmins.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
-        lblManageEnterpriseAdmins.setForeground(new java.awt.Color(61, 64, 91));
+        lblManageEnterpriseAdmins.setForeground(new java.awt.Color(230, 126, 34));
         lblManageEnterpriseAdmins.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblManageEnterpriseAdmins.setText("Manage Enterprise Administrators");
         add(lblManageEnterpriseAdmins, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 687, 40));
@@ -166,17 +173,17 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel6.setText("Set Password:");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 110, -1));
 
-        btnSubmit.setBackground(new java.awt.Color(129, 178, 154));
+        btnSubmit.setBackground(new java.awt.Color(51, 102, 255));
         btnSubmit.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnSubmit.setForeground(new java.awt.Color(61, 64, 91));
+        btnSubmit.setForeground(new java.awt.Color(255, 255, 255));
         btnSubmit.setText("Submit");
         btnSubmit.setBorderPainted(false);
         btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnSubmitMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnSubmitMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseEntered(evt);
             }
         });
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -198,17 +205,17 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         comboBoxSelectEnterprise.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(comboBoxSelectEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 130, -1));
 
-        btnDelete.setBackground(new java.awt.Color(129, 178, 154));
+        btnDelete.setBackground(new java.awt.Color(51, 102, 255));
         btnDelete.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(61, 64, 91));
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Delete");
         btnDelete.setBorderPainted(false);
         btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnDeleteMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnDeleteMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDeleteMouseEntered(evt);
             }
         });
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -245,7 +252,59 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         
         Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
         
-
+        if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Wellness")){
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new HealthAdminRole());
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");
+                        txtPassword.setText("");
+                        return;
+                    }
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new HealthAdminRole());
+        } else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Justice")){
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new LegalAdminRole());
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");
+                        txtPassword.setText("");
+                        return;
+                    }
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new LegalAdminRole());
+        }else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("NGO")){
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new NGOAdminRole());
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");
+                        txtPassword.setText("");
+                        return;
+                    }
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new NGOAdminRole());
+        }else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Pharmaceutical")){
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PharmacyAdminRole());
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");
+                        txtPassword.setText("");
+                        return;
+                    }
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PharmacyAdminRole());
+        }
+        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Rehabilitation")){
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new RehabilitationCaretaker());
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");
+                        txtPassword.setText("");
+                        return;
+                    }
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PharmacyAdminRole());
+        }
+        //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new AdminRole());
         populateTable();
         txtUsername.setText("");
         txtPassword.setText("");

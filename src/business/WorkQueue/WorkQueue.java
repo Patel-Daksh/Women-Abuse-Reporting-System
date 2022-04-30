@@ -90,10 +90,10 @@ public class WorkQueue {
     public int getcountbytypesa(String type)
     {
         int count=0;
-
+        
         for(CaseReporterWorkRequest hp: caseReporterWorkRequestList)
         {
-
+            
             if(hp.getAssaultType().equalsIgnoreCase(type))
             {
                 count++;

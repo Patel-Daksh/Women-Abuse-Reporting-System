@@ -55,14 +55,14 @@ public class sysadminJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel1.setBackground(new java.awt.Color(129, 178, 154));
+        jPanel1.setBackground(new java.awt.Color(253, 235, 208));
         jPanel1.setToolTipText("");
         jPanel1.setInheritsPopupMenu(true);
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         lblWelcomeSysAdmin.setBackground(java.awt.Color.white);
         lblWelcomeSysAdmin.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
-        lblWelcomeSysAdmin.setForeground(new java.awt.Color(61, 64, 91));
+        lblWelcomeSysAdmin.setForeground(new java.awt.Color(51, 102, 255));
         lblWelcomeSysAdmin.setText("Welcome System Admin");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -74,17 +74,17 @@ public class sysadminJPanel extends javax.swing.JPanel {
 
         btnManageEnterprises.setBackground(new java.awt.Color(255, 255, 255));
         btnManageEnterprises.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnManageEnterprises.setForeground(new java.awt.Color(61, 64, 91));
+        btnManageEnterprises.setForeground(new java.awt.Color(51, 102, 255));
         btnManageEnterprises.setText("Manage Enterprises");
         btnManageEnterprises.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnManageEnterprises.setBorderPainted(false);
         btnManageEnterprises.setContentAreaFilled(false);
         btnManageEnterprises.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnManageEnterprisesMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnManageEnterprisesMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnManageEnterprisesMouseEntered(evt);
             }
         });
         btnManageEnterprises.addActionListener(new java.awt.event.ActionListener() {
@@ -102,17 +102,17 @@ public class sysadminJPanel extends javax.swing.JPanel {
 
         btnManageEnterpriseAdministrator.setBackground(new java.awt.Color(255, 255, 255));
         btnManageEnterpriseAdministrator.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnManageEnterpriseAdministrator.setForeground(new java.awt.Color(61, 64, 91));
+        btnManageEnterpriseAdministrator.setForeground(new java.awt.Color(51, 102, 255));
         btnManageEnterpriseAdministrator.setText("Manage Enterprise Administrators ");
         btnManageEnterpriseAdministrator.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnManageEnterpriseAdministrator.setBorderPainted(false);
         btnManageEnterpriseAdministrator.setContentAreaFilled(false);
         btnManageEnterpriseAdministrator.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnManageEnterpriseAdministratorMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnManageEnterpriseAdministratorMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnManageEnterpriseAdministratorMouseEntered(evt);
             }
         });
         btnManageEnterpriseAdministrator.addActionListener(new java.awt.event.ActionListener() {
@@ -131,17 +131,17 @@ public class sysadminJPanel extends javax.swing.JPanel {
 
         btnManageNetworks.setBackground(new java.awt.Color(255, 255, 255));
         btnManageNetworks.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnManageNetworks.setForeground(new java.awt.Color(61, 64, 91));
+        btnManageNetworks.setForeground(new java.awt.Color(51, 102, 255));
         btnManageNetworks.setText("Manage Networks");
         btnManageNetworks.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnManageNetworks.setBorderPainted(false);
         btnManageNetworks.setContentAreaFilled(false);
         btnManageNetworks.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnManageNetworksMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnManageNetworksMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnManageNetworksMouseEntered(evt);
             }
         });
         btnManageNetworks.addActionListener(new java.awt.event.ActionListener() {

@@ -44,7 +44,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     private HashMap<String, Integer> chart;
     int bostoncases,seattlecases;
    
-   private HashMap<String, Integer> piechartbos;
+   //private HashMap<String, Integer> piechartbos;
    private HashMap<String, Integer> piechartsea;
 
 
@@ -53,7 +53,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.system = system;
         chart= new HashMap<String,Integer>();
-        piechartbos=new HashMap<String,Integer>();
+        //piechartbos=new HashMap<String,Integer>();
         piechartsea=new HashMap<String,Integer>();
 
         populateNetworkTable();
@@ -285,8 +285,9 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                      
                     
                 }
-                updateSeattlePieChart(network);
+               // updateSeattlePieChart(network);
             }
+                            updateSeattlePieChart(network);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -302,7 +303,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 if (o instanceof CaseVolunteerOrganization){
                
                 int count = o.getWorkQueue().getCaseReporterWorkRequestList().size();
-                
+                System.out.println(count);
                 chart.put(n.toString(), count);
                 
             }}
@@ -336,13 +337,19 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     private void UpdatePieData(Organization org) {
      
        
+//      piechartsea.clear();
+//      piechartsea.put("Labor",org.getWorkQueue().getcountbytypesa("Labor"));
+//      piechartsea.put("Physical Abuse", org.getWorkQueue().getcountbytypesa("Physical Abuse"));
+//      piechartsea.put("Sexual Abuse", org.getWorkQueue().getcountbytypesa("Sexual Abuse"));
+//      piechartsea.put("Harrassment", org.getWorkQueue().getcountbytypesa("Harrassment"));
+//      piechartsea.put("Other", org.getWorkQueue().getcountbytypesa("Other"));
       piechartsea.clear();
-piechartsea.put("Labor",org.getWorkQueue().getcountbytypesa("Labor"));
-piechartsea.put("Physical Abuse", org.getWorkQueue().getcountbytypesa("Physical Abuse"));
-piechartsea.put("Sexual Abuse", org.getWorkQueue().getcountbytypesa("Sexual Abuse"));
-piechartsea.put("Harrassment", org.getWorkQueue().getcountbytypesa("Harrassment"));
-piechartsea.put("Other", org.getWorkQueue().getcountbytypesa("Other"));
-        //this.updateSeattlePieChart();
+      piechartsea.put("Labor",org.getWorkQueue().getcountbytypesa("Labor"));
+      piechartsea.put("Physical Abuse", org.getWorkQueue().getcountbytypesa("Physical Abuse"));
+      piechartsea.put("Sexual Abuse", org.getWorkQueue().getcountbytypesa("Sexual Abuse"));
+      piechartsea.put("Harrassment", org.getWorkQueue().getcountbytypesa("Harrassment"));
+      piechartsea.put("Other", org.getWorkQueue().getcountbytypesa("Other"));
+      //this.updateSeattlePieChart();
         
     }
 
@@ -351,7 +358,9 @@ piechartsea.put("Other", org.getWorkQueue().getcountbytypesa("Other"));
         DefaultPieDataset ddd=new DefaultPieDataset();
         Set keys=piechartsea.keySet();
         Iterator it=keys.iterator();
-        
+        keys.size();
+        System.out.print(keys.size());
+      
         while(it.hasNext())
         {
             Object type=it.next().toString();
@@ -363,6 +372,7 @@ piechartsea.put("Other", org.getWorkQueue().getcountbytypesa("Other"));
             ChartFrame cp=new ChartFrame("No of cases by type in " + network.toString(),seapie);
             cp.setVisible(true);
             cp.setSize(600,600);
+        
         
     }
 

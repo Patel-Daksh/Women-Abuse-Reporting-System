@@ -337,10 +337,10 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
      
        
       piechartsea.clear();
-piechartsea.put("Child Labor",org.getWorkQueue().getcountbytypesa("Child Labor"));
-piechartsea.put("Child Physical Abuse", org.getWorkQueue().getcountbytypesa("Child Physical Abuse"));
-piechartsea.put("Child Sexual Abuse", org.getWorkQueue().getcountbytypesa("Child Sexual Abuse"));
-piechartsea.put("Child Harrassment", org.getWorkQueue().getcountbytypesa("Child Harrassment"));
+piechartsea.put("Labor",org.getWorkQueue().getcountbytypesa("Labor"));
+piechartsea.put("Physical Abuse", org.getWorkQueue().getcountbytypesa("Physical Abuse"));
+piechartsea.put("Sexual Abuse", org.getWorkQueue().getcountbytypesa("Sexual Abuse"));
+piechartsea.put("Harrassment", org.getWorkQueue().getcountbytypesa("Harrassment"));
 piechartsea.put("Other", org.getWorkQueue().getcountbytypesa("Other"));
         //this.updateSeattlePieChart();
         

@@ -84,7 +84,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         namesurvivorjLabel.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        namesurvivorjLabel.setText("Name of Child : ");
+        namesurvivorjLabel.setText("Name of Victim : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -321,7 +321,7 @@ public class ReportJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(24, 310, 254, 0);
         jPanel1.add(ReportjButton, gridBagConstraints);
 
-        comboBoxIncident.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select one", "Child Labor", "Child Physical Abuse", "Child Sexual Abuse", "ChildHarrassment" }));
+        comboBoxIncident.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select one", "Labor", "Physical Abuse", "Sexual Abuse", "Harrassment" }));
         comboBoxIncident.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboBoxIncidentActionPerformed(evt);

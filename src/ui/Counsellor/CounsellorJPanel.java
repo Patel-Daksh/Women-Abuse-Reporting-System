@@ -9,6 +9,7 @@ import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Network.Network;
 import business.Enterprise.WellnessEnterprise;
+import business.Enterprise.NGOrgEnterprise;
 import business.Organization.CounsellingOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
@@ -29,7 +30,7 @@ public class CounsellorJPanel extends javax.swing.JPanel {
     private EcoSystem business;
     private UserAccount userAccount;
     private CounsellingOrganization COrganization; 
-    private WellnessEnterprise Henterprise;
+    private NGOrgEnterprise Henterprise;
     private Network network;
     public CounsellorJPanel(JPanel userProcessContainer, UserAccount account, Organization organization,Enterprise enterprise,EcoSystem business, Network network) {
         initComponents();
@@ -37,7 +38,7 @@ public class CounsellorJPanel extends javax.swing.JPanel {
         this.userAccount = account;
         this.business = business;
         this.COrganization = (CounsellingOrganization)organization;
-        this.Henterprise = (WellnessEnterprise) enterprise;
+        this.Henterprise = (NGOrgEnterprise) enterprise;
         this.network = network;
         jSplitPane1.setDividerSize(0);
         jSplitPane1.setDividerLocation(100);

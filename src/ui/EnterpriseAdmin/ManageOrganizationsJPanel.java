@@ -44,14 +44,14 @@ public class ManageOrganizationsJPanel extends javax.swing.JPanel {
         comboBoxOrgType.removeAllItems();
         if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("NGO")){
             for (Organization.Type type : Organization.Type.values()){
-                if (type.getValue().equals(Organization.Type.CaseVolunteer.getValue()) || type.getValue().equals(Organization.Type.PsychiatricOrganization.getValue())){
+                if (type.getValue().equals(Organization.Type.CaseVolunteer.getValue()) || type.getValue().equals(Organization.Type.CounsellingOrganization.getValue())){
                     comboBoxOrgType.addItem(type);
                 }
             }
         } else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Wellness")){
             for (Organization.Type type : Organization.Type.values()){
                 if (type.getValue().equals(Organization.Type.Hospital.getValue()) || type.getValue().equals(Organization.Type.Forensic.getValue())
-                        || type.getValue().equals(Organization.Type.CounsellingOrganization.getValue())){
+                        || type.getValue().equals(Organization.Type.PsychiatricOrganization.getValue())){
                     comboBoxOrgType.addItem(type);
                 }
             }

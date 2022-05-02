@@ -390,7 +390,7 @@ import javax.swing.JPanel;
         psychrequest.setCaseReporterWorkRequest(request);
         psychrequest.getCaseReporterWorkRequest().setHpWorkRequest(psychrequest);
 
-        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.NGO);
+        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Wellness);
         Organization org = null;
         for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
             System.out.println("ex"+organization.getName());
@@ -490,7 +490,7 @@ import javax.swing.JPanel;
         counsellarreq.setHswr(request);
         counsellarreq.getHswr().setCounsellorWorkRequest(counsellarreq);
 
-        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Wellness);
+        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.NGO);
         Organization org = null;
         for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
             if (organization instanceof CounsellingOrganization){
@@ -505,9 +505,8 @@ import javax.swing.JPanel;
         }
 
         JOptionPane.showMessageDialog(null, "Request submitted to Counsellar");
-
-        JOptionPane.showMessageDialog(null, "Request submitted to Counsellar");
         // TODO add your handling code here:
+
 
     }//GEN-LAST:event_btnReqCounsellarActionPerformed
 

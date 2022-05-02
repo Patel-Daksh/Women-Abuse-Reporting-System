@@ -8,6 +8,7 @@ package ui.Psychiatrist;
 import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Enterprise.NGOrgEnterprise;
+import business.Enterprise.WellnessEnterprise;
 import business.Network.Network;
 import business.Organization.Organization;
 import business.Organization.PsychiatricOrganization;
@@ -27,7 +28,7 @@ public class PsychiatristJPanel extends javax.swing.JPanel {
     private EcoSystem business;
     private UserAccount userAccount;
     private PsychiatricOrganization HPOrganization; 
-    private NGOrgEnterprise NGOenterprise;
+    private WellnessEnterprise NGOenterprise;
     private Network network;
     public PsychiatristJPanel(JPanel userProcessContainer, UserAccount account, Organization organization,Enterprise enterprise,EcoSystem business,Network network) {
         initComponents();
@@ -35,7 +36,7 @@ public class PsychiatristJPanel extends javax.swing.JPanel {
         this.userAccount = account;
         this.business = business;
         this.HPOrganization = (PsychiatricOrganization)organization;
-        this.NGOenterprise = (NGOrgEnterprise) enterprise;
+        this.NGOenterprise = (WellnessEnterprise) enterprise;
         this.network=network;
         jSplitPane1.setDividerSize(0);
         jSplitPane1.setDividerLocation(100);

@@ -281,7 +281,7 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
         }catch(Exception e)
         {
             System.out.println(""+e);
-            JOptionPane.showMessageDialog(this, "Incorrect E-mail id.Invitation cannot be been sent.");
+            //JOptionPane.showMessageDialog(this, "Incorrect E-mail id.Invitation cannot be been sent.");
 
         }
     }

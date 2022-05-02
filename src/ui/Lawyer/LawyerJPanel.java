@@ -65,8 +65,8 @@ public class LawyerJPanel extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(253, 235, 208));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        lblHeader.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
-        lblHeader.setForeground(new java.awt.Color(51, 102, 255));
+        lblHeader.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
+        lblHeader.setForeground(new java.awt.Color(61, 64, 91));
         lblHeader.setText("Welcome Lawyer");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;

@@ -70,11 +70,12 @@ public class ViewPrescriptionJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(244, 241, 222));
 
-        jLabel1.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(61, 64, 58));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Prescription");
 
+        jButton1.setBackground(new java.awt.Color(129, 178, 154));
         jButton1.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jButton1.setText("Back");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -122,6 +123,7 @@ public class ViewPrescriptionJPanel extends javax.swing.JPanel {
 
         jTextField3.setEnabled(false);
 
+        jButton2.setBackground(new java.awt.Color(129, 178, 154));
         jButton2.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jButton2.setText("Process ");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {

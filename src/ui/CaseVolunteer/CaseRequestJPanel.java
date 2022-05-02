@@ -133,7 +133,6 @@ public class CaseRequestJPanel extends javax.swing.JPanel {
         btnAssignRequest.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnAssignRequest.setForeground(new java.awt.Color(61, 64, 91));
         btnAssignRequest.setText("Assign Request");
-        btnAssignRequest.setBorderPainted(false);
         btnAssignRequest.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnAssignRequest.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -154,7 +153,6 @@ public class CaseRequestJPanel extends javax.swing.JPanel {
         btnViewCaseReport.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnViewCaseReport.setForeground(new java.awt.Color(61, 64, 91));
         btnViewCaseReport.setText("View Case Report");
-        btnViewCaseReport.setBorderPainted(false);
         btnViewCaseReport.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnViewCaseReport.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -169,20 +167,19 @@ public class CaseRequestJPanel extends javax.swing.JPanel {
                 btnViewCaseReportActionPerformed(evt);
             }
         });
-        jPanel1.add(btnViewCaseReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, 38));
+        jPanel1.add(btnViewCaseReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 170, 38));
 
         btnCheckStatus.setBackground(new java.awt.Color(129, 178, 154));
         btnCheckStatus.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnCheckStatus.setForeground(new java.awt.Color(61, 64, 91));
         btnCheckStatus.setText("Check Status");
-        btnCheckStatus.setBorderPainted(false);
         btnCheckStatus.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCheckStatus.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnCheckStatusMouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnCheckStatusMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCheckStatusMouseExited(evt);
             }
         });
         btnCheckStatus.addActionListener(new java.awt.event.ActionListener() {
@@ -190,7 +187,7 @@ public class CaseRequestJPanel extends javax.swing.JPanel {
                 btnCheckStatusActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCheckStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 143, 42));
+        jPanel1.add(btnCheckStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 170, 42));
         jPanel1.add(txtPsyhDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 270, 93, 26));
         jPanel1.add(txtLawyerReceiver, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 310, 100, 24));
         jPanel1.add(txtLawyerDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 270, 94, 27));

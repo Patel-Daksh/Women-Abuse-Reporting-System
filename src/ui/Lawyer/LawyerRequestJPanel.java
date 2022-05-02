@@ -69,8 +69,10 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
         btnEncounter = new javax.swing.JButton();
         btnCaseComplete = new javax.swing.JButton();
 
-        lblHeader.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
-        lblHeader.setForeground(new java.awt.Color(51, 102, 255));
+        setBackground(new java.awt.Color(244, 241, 222));
+
+        lblHeader.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
+        lblHeader.setForeground(new java.awt.Color(61, 64, 91));
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Requests");
 
@@ -95,6 +97,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblLawyerManageRequest);
 
+        btnAssignRequest.setBackground(new java.awt.Color(129, 178, 154));
         btnAssignRequest.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnAssignRequest.setText("Assign Request");
         btnAssignRequest.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -111,6 +114,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnViewCaseReport.setBackground(new java.awt.Color(129, 178, 154));
         btnViewCaseReport.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnViewCaseReport.setText("View Case Report");
         btnViewCaseReport.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -127,6 +131,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnEncounter.setBackground(new java.awt.Color(129, 178, 154));
         btnEncounter.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnEncounter.setText("Ecounters");
         btnEncounter.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -143,6 +148,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnCaseComplete.setBackground(new java.awt.Color(129, 178, 154));
         btnCaseComplete.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnCaseComplete.setText(" Case Complete");
         btnCaseComplete.addMouseListener(new java.awt.event.MouseAdapter() {

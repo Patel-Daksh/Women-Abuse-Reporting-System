@@ -85,7 +85,6 @@ public class CaseVolunteerPJPanel extends javax.swing.JPanel {
         btnViewReport.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnViewReport.setForeground(new java.awt.Color(61, 64, 91));
         btnViewReport.setText("View Report");
-        btnViewReport.setBorderPainted(false);
         btnViewReport.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnViewReportMouseEntered(evt);

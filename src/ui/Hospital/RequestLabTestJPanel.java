@@ -71,7 +71,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(244, 241, 222));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(61, 64, 91));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Request Lab Test");

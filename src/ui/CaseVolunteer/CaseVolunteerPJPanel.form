@@ -97,7 +97,6 @@
                   <Color blue="5b" green="40" red="3d" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="View Report"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnViewReportMouseEntered"/>

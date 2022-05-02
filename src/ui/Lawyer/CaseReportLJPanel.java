@@ -80,6 +80,8 @@ public class CaseReportLJPanel extends javax.swing.JPanel {
         btnSendInvite = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(244, 241, 222));
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
@@ -234,6 +236,7 @@ public class CaseReportLJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 82);
         jPanel1.add(txtSuspectType, gridBagConstraints);
 
+        btnSendInvite.setBackground(new java.awt.Color(129, 178, 154));
         btnSendInvite.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnSendInvite.setText("Send Invite");
         btnSendInvite.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -250,6 +253,7 @@ public class CaseReportLJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setBackground(new java.awt.Color(129, 178, 154));
         btnBack.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnBack.setText("Back");
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {

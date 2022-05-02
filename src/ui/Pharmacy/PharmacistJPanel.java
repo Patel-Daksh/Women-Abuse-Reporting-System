@@ -56,7 +56,7 @@ public class PharmacistJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel3.setBackground(new java.awt.Color(129, 178, 154));
+        jPanel3.setBackground(new java.awt.Color(253, 235, 208));
         jPanel3.setToolTipText("");
         jPanel3.setLayout(new java.awt.GridBagLayout());
 

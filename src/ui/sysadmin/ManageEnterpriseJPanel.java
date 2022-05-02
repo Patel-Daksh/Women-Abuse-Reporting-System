@@ -139,11 +139,11 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         btnSubmit.setText("Submit");
         btnSubmit.setBorderPainted(false);
         btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnSubmitMouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnSubmitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSubmitMouseExited(evt);
             }
         });
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -151,7 +151,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 258, 120, -1));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 120, -1));
 
         lblNetworkName.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblNetworkName.setText("Name:");
@@ -180,11 +180,11 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         btnDelete.setText("Delete");
         btnDelete.setBorderPainted(false);
         btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnDeleteMouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnDeleteMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDeleteMouseExited(evt);
             }
         });
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -192,7 +192,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 110, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseEntered
